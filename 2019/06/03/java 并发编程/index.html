@@ -416,7 +416,7 @@ height:50vh;
 <li><p>首先要将变量从主内存拷贝的自己的工作内存空间，然后对变量进行操作，操作完成后再将变量写回主内存，不能直接操作主内存中的变量，工作内存中存储着主内存中的变量副本拷贝，前面说过，工作内存是每个线程的私有数据区域，因此不同的线程间无法访问对方的工作内存，线程间的通信(传值)必须通过主内存来完成。</p>
 </li>
 <li><p>内存模型图</p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cjmm.png" alt></p>
+<p><img src="/img/jmm.png" alt></p>
 </li>
 </ul>
 <h4 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h4><ul>
@@ -461,9 +461,9 @@ height:50vh;
 </ul>
 <p>由于编译器个处理器都能执行指令重排序优化，如果在指令间插入一条 Memory Barrier 则会告诉编译器和 CPU，不管什么指令都不能个这条 Memory Barrier 指令重排序，也就是说通过插入内存屏障禁止在内存屏障前后执行重排序优化。内存屏障另一个作用是强制刷出各种 CPU 缓存数据，因此任何 CPU 上的线程都能读取到这些数据的最新版本。</p>
 <p>下面是保守策略下，volatile写插入内存屏障后生成的指令序列示意图：</p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cvolatile.png" alt></p>
+<p><img src="/img/volatile.png" alt></p>
 <p>下面是在保守策略下，volatile读插入内存屏障后生成的指令序列示意图：</p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cvolatile2.png" alt></p>
+<p><img src="/img/volatile2.png" alt></p>
 <h4 id="线程安全性保证"><a href="#线程安全性保证" class="headerlink" title="线程安全性保证"></a>线程安全性保证</h4><ul>
 <li>工作内存与主内存同步延迟现象导致可见性问题<ul>
 <li>可以使用 synchronzied 或 volatile 关键字解决，它们可以使用一个线程修改后的变量立即对其他线程可见</li>
@@ -695,7 +695,7 @@ height:50vh;
 <li>LinkedBlokcingQueue：是一个基于链表结构的阻塞队列，此队列按 FIFO（先进先出）对元素进行排序，吞吐量通常要高于 ArrayBlockingQueue。</li>
 <li>SynchronousQueue：是一个不存储元素的阻塞队列，每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高于 LinkedBlokcingQueue。</li>
 </ul>
-<h3 id="什么是阻塞队列"><a href="#什么是阻塞队列" class="headerlink" title="什么是阻塞队列"></a>什么是阻塞队列</h3><p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cqueue.png" alt></p>
+<h3 id="什么是阻塞队列"><a href="#什么是阻塞队列" class="headerlink" title="什么是阻塞队列"></a>什么是阻塞队列</h3><p><img src="/img/queue.png" alt></p>
 <ul>
 <li><p>阻塞队列，顾名思义，首先它是一个队列，而一个阻塞队列在数据结构中所起的作用大致如图所示：</p>
 </li>
@@ -793,7 +793,7 @@ height:50vh;
 
 </li>
 </ul>
-<h3 id="线程池如果使用？"><a href="#线程池如果使用？" class="headerlink" title="线程池如果使用？"></a>线程池如果使用？</h3><h4 id="架构说明"><a href="#架构说明" class="headerlink" title="架构说明"></a>架构说明</h4><p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cthreadpool.jpg" alt></p>
+<h3 id="线程池如果使用？"><a href="#线程池如果使用？" class="headerlink" title="线程池如果使用？"></a>线程池如果使用？</h3><h4 id="架构说明"><a href="#架构说明" class="headerlink" title="架构说明"></a>架构说明</h4><p><img src="/img/threadpool.jpg" alt></p>
 <h4 id="编码实现"><a href="#编码实现" class="headerlink" title="编码实现"></a>编码实现</h4><ul>
 <li>Executors.newSingleThreadExecutor()：只有一个线程的线程池，因此所有提交的任务是顺序执行</li>
 <li>Executors.newCachedThreadPool()：线程池里有很多线程需要同时执行，老的可用线程将被新的任务触发重新执行，如果线程超过60秒内没执行，那么将被终止并从池中删除</li>
@@ -848,7 +848,7 @@ height:50vh;
 <li>当线程池中超过corePoolSize 线程，空闲时间达到 keepAliveTime 时，关闭空闲线程 。</li>
 <li>当设置allowCoreThreadTimeOut(true) 时，线程池中 corePoolSize 线程空闲时间达到 keepAliveTime 也将关闭。</li>
 </ol>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJava%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0%5Cimg%5Cthreadpoolexecutor.jpg" alt></p>
+<p><img src="/img/threadpoolexecutor.jpg" alt></p>
 <h2 id="线程池用过吗？生产上你如何设置合理参数？"><a href="#线程池用过吗？生产上你如何设置合理参数？" class="headerlink" title="线程池用过吗？生产上你如何设置合理参数？"></a>线程池用过吗？生产上你如何设置合理参数？</h2><h3 id="线程池的拒绝策略你谈谈？"><a href="#线程池的拒绝策略你谈谈？" class="headerlink" title="线程池的拒绝策略你谈谈？"></a>线程池的拒绝策略你谈谈？</h3><ul>
 <li>是什么<ul>
 <li>等待队列已经满了，再也塞不下新的任务，同时线程池中的线程数达到了最大线程数，无法继续为新任务服务。</li>
@@ -931,9 +931,9 @@ height:50vh;
 <li><p>ReentrantLock</p>
 <p>ReentrantLock 和 synchronized 的区别：</p>
 <pre><code>1. 可重入性 ，ReentrantLock 是可重入锁
-   2. 实现， synchronized 依赖JVM，ReentrantLock 依赖JDK
+         2. 实现， synchronized 依赖JVM，ReentrantLock 依赖JDK
       3. 性能，建议使用synchronized，方便写
-         4. 功能，ReentrantLock 独有的功能：
+             4. 功能，ReentrantLock 独有的功能：
        1. 可指定公平锁还是非公平锁
        2. 提供一个Condition类，可以分组唤醒需要唤醒的线程
        3. 提供能够中断等待锁的线程机制，lock.lockInterruptibly()</code></pre></li>
@@ -946,7 +946,7 @@ height:50vh;
             <p>原文作者：<a href="http://a991817.github.io">Dadada</a>
             </p><p>原文链接：<a href="http://a991817.github.io/2019/06/03/java 并发编程/">http://a991817.github.io/2019/06/03/java 并发编程/</a>
             </p><p>发表日期：<a href="http://a991817.github.io/2019/06/03/java 并发编程/">June 3rd 2019, 11:13:46 pm</a>
-            </p><p>更新日期：<a href="http://a991817.github.io/2019/06/03/java 并发编程/">June 3rd 2019, 11:14:12 pm</a>
+            </p><p>更新日期：<a href="http://a991817.github.io/2019/06/03/java 并发编程/">June 3rd 2019, 11:31:07 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     

@@ -405,7 +405,7 @@ height:50vh;
 <li><p><strong>Collections是一个提供一些处理容器类静态方法的类。</strong></p>
 </li>
 </ul>
-<h1 id><a href="#" class="headerlink" title></a><img src="./img/CollectionVsCollections_thumb.jpg" alt></h1><p><strong>JDK不提供Collection接口的具体实现，而是提供了更加具体的子接口（如Set和List）实现</strong>。</p>
+<h1 id><a href="#" class="headerlink" title></a><img src="/img/CollectionVsCollections_thumb.jpg" alt></h1><p><strong>JDK不提供Collection接口的具体实现，而是提供了更加具体的子接口（如Set和List）实现</strong>。</p>
 <p>那Collection接口存在有何作用呢？</p>
 <p>原因在于：所有容器的实现类（如ArrayList实现了List接口，HashSet实现了Set接口）提供了两个‘标准’的构造函数来实现：</p>
 <ol>
@@ -414,20 +414,20 @@ height:50vh;
 <li><p>一个带有<strong>Collection类型</strong>单参数构造方法，用于创建一个具有其参数相同元素新的Collection及其实现类等。<strong>实际上</strong>：因为所有通用的容器类遵从Collection接口，用第二种构造方法是允许容器之间相互的复制。</p>
 </li>
 </ol>
-<h2 id="二、Collection-的类层次结构"><a href="#二、Collection-的类层次结构" class="headerlink" title="二、Collection 的类层次结构"></a>二、Collection 的类层次结构</h2><p><img src="./img/java-collection-hierarchy.jpg" alt></p>
+<h2 id="二、Collection-的类层次结构"><a href="#二、Collection-的类层次结构" class="headerlink" title="二、Collection 的类层次结构"></a>二、Collection 的类层次结构</h2><p><img src="/img/java-collection-hierarchy.jpg" alt></p>
 <p><strong>Set</strong>：</p>
 <p>​    一个<strong>不包括重复元素（包括可变对象）</strong>的Collection，是一种<strong>无序</strong>的集合。Set不包含满足 a.equals(b) 的元素对a和b，并且最多有一个null。实现Set的接口有：EnumSet、HashSet、TreeSet等。下图是Set的JDK源码UML图。</p>
-<p><img src="./img/Set_thumb.jpg" alt></p>
+<p><img src="/img/Set_thumb.jpg" alt></p>
 <p><strong>List</strong>：</p>
 <p>一个<strong>有序</strong>的Collection（也称序列），元素<strong>可以重复</strong>。确切的讲，列表通常允许满足 <code>e1.equals(e2)</code> 的元素对 <code>e1</code> 和 <code>e2</code>，并且如果列表本身允许 null 元素的话，<strong>通常它们允许多个 null 元素</strong>。实现List的有：ArrayList、LinkedList、Vector、Stack等。下图是List的JDK源码UML图。</p>
-<p><img src="./img/list_thumb.jpg" alt></p>
+<p><img src="/img/list_thumb.jpg" alt></p>
 <p><strong>Queue</strong>：</p>
 <p>一种队列则是<strong>双端队列</strong>，支持在头、尾两端插入和移除元素，主要包括：ArrayDeque、LinkedBlockingDeque、LinkedList。另一种是<strong>阻塞式队列</strong>，队列满了以后再插入元素则会抛出异常，主要包括ArrayBlockQueue、PriorityBlockingQueue、LinkedBlockingQueue。虽然接口并未定义阻塞方法，但是实现类扩展了此接口。下图是Queue的JDK源码UML图。</p>
-<p><img src="./img/queue.jpg" alt></p>
-<h2 id="三、Map的类的层次结构"><a href="#三、Map的类的层次结构" class="headerlink" title="三、Map的类的层次结构"></a>三、Map的类的层次结构</h2><p>下面的图是Map的层次结构图<img src="./img/MapClassHierarchy-600x354.jpg" alt></p>
+<p><img src="/img/queue.jpg" alt></p>
+<h2 id="三、Map的类的层次结构"><a href="#三、Map的类的层次结构" class="headerlink" title="三、Map的类的层次结构"></a>三、Map的类的层次结构</h2><p>下面的图是Map的层次结构图<img src="/img/MapClassHierarchy-600x354.jpg" alt></p>
 <p>Map：</p>
 <p>是一个键值对的集合。也就是说，一个映射不能包含重复的键，每个键最多映射到一个值。该接口取代了Dictionary抽象类。实现map的有：HashMap、TreeMap、HashTable、Properties、EnumMap。下图是Map的JDK源码UML图。</p>
-<p><img src="./img/map_thumb.jpg" alt></p>
+<p><img src="/img/map_thumb.jpg" alt></p>
 <h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><h5 id="Vector和ArrayList"><a href="#Vector和ArrayList" class="headerlink" title="Vector和ArrayList"></a><strong>Vector和ArrayList</strong></h5><p>1，<strong>vector是线程同步</strong>的，所以它也是线程安全的，而<strong>arraylist是线程异步</strong>的，是不安全的。如果不考虑到线程的安全因素，一般用arraylist效率比较高。（<u>不考虑线程安全，arraylist效率高</u>）
 2，如果集合中的元素的数目大于目前集合数组的长度时，vector增长率为目前数组长度的100%,而arraylist增长率为目前数组长度的50%.如过在集合中使用数据量比较大的数据，用vector有一定的优势。（<u>使用数据量比较大的数据，用vector有优势</u>）
 3，如果查找一个指定位置的数据，vector和arraylist使用的时间是相同的，都是0(1),这个时候使用vector和arraylist都可以。而如果移动一个指定位置的数据花费的时间为0(n-i)n为总长度，这个时候就应该考虑到使用linklist,因为它移动一个指定位置的数据所花费的时间为0(1),而查询一个指定位置的数据时花费的时间为0(i)。（<u>移动指定位置用linklist</u>）</p>
@@ -446,7 +446,7 @@ height:50vh;
             <p>原文作者：<a href="http://a991817.github.io">Dadada</a>
             </p><p>原文链接：<a href="http://a991817.github.io/2019/03/27/认识容器/">http://a991817.github.io/2019/03/27/认识容器/</a>
             </p><p>发表日期：<a href="http://a991817.github.io/2019/03/27/认识容器/">March 27th 2019, 3:14:48 pm</a>
-            </p><p>更新日期：<a href="http://a991817.github.io/2019/03/27/认识容器/">June 3rd 2019, 11:17:47 pm</a>
+            </p><p>更新日期：<a href="http://a991817.github.io/2019/03/27/认识容器/">June 3rd 2019, 11:33:37 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
