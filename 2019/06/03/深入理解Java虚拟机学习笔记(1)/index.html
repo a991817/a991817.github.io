@@ -492,8 +492,8 @@ height:50vh;
 <p>它的主要<strong>不足</strong>有两个：一个是效率问题，标记和清除两个过程的效率都不高；另一个是空间问题，标记清除之后会产生大量不连续的内存碎片 </p>
 <h5 id="3-5-2-复制算法"><a href="#3-5-2-复制算法" class="headerlink" title="3.5.2 复制算法"></a>3.5.2 复制算法</h5><p>它将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。 当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。  </p>
 <h5 id="3-5-3-标记-整理算法"><a href="#3-5-3-标记-整理算法" class="headerlink" title="3.5.3 标记-整理算法"></a>3.5.3 标记-整理算法</h5><p>标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存，“标记-整理”算法的示意图如下 </p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgc1.png" alt></p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgc2.png" alt></p>
+<p><img src="/img/gc1.png" alt></p>
+<p><img src="/img/gc2.png" alt></p>
 <h5 id="3-5-4-分代收集算法"><a href="#3-5-4-分代收集算法" class="headerlink" title="3.5.4 分代收集算法"></a>3.5.4 分代收集算法</h5><p>当前商业虚拟机的垃圾收集都采用“分代收集”（Generational Collection）算法，这种算法并没有什么新的思想，只是根据对象存活周期的不同将内存划分为几块。 一般是把Java堆分为<strong>新生代</strong>和<strong>老年代</strong>，这样就可以根据各个年代的特点采用最适当的收集算法。 在新生代中，每次垃圾收集时都发现有大批对象死去，只有少量存活，那就选用复制算法，只需要付出少量存活对象的复制成本就可以完成收集。 而老年代中因为对象存活率高、 没有额外空间对它进行分配担保，就必须使用“标记—清理”或者“标记—整理”算法来进行回收 </p>
 <h4 id="3-6-HotSpot的算法实现"><a href="#3-6-HotSpot的算法实现" class="headerlink" title="3.6 HotSpot的算法实现"></a>3.6 HotSpot的算法实现</h4><h5 id="3-6-1-枚举根节点"><a href="#3-6-1-枚举根节点" class="headerlink" title="3.6.1 枚举根节点"></a>3.6.1 枚举根节点</h5><p><strong>可达性分析</strong>对执行时间的敏感还体现在GC停顿上，因为这项分析工作必须在一<br>个能确保一致性的<strong>快照</strong>中进行——这里“一致性”的意思是指在整个分析期间整个执行系统看起来就像被冻结在某个时间点上 </p>
 <p>在HotSpot的实现中，是使用一组称为OopMap的数据结构来达到”直接得知哪些地方存放着对象引用 “这个目的的，在类加载完成的时候，HotSpot就把对象内什么偏移量上是什么类型的数据计算出来，在JIT编译过程中，也会在特定的位置记录下栈和寄存器中哪些位置是引用。  </p>
@@ -507,12 +507,12 @@ height:50vh;
 <h5 id="3-6-3-安全区域"><a href="#3-6-3-安全区域" class="headerlink" title="3.6.3 安全区域"></a>3.6.3 安全区域</h5><p>安全区域是指在一段代码片段之中，引用关系不会发生变化。 在这个区域中的任意地方开始GC都是安全的。 我们也可以把Safe Region看做是被扩展了的Safepoint。 </p>
 <p>线程不执行的时候（处于Sleep状态或者Blocked状态），这时候线程无法响应JVM的中断请求，“走”到安全的地方去中断挂起，JVM也显然不太可能等待线程重新被分配CPU时间。 对于这种情况，就需要安全区域（Safe Region）来解决  </p>
 <p>在线程执行到Safe Region中的代码时，首先标识自己已经进入了Safe Region，那样，当在这段时间里JVM要发起GC时，就不用管标识自己为Safe Region状态的线程了。 在线程要离开Safe Region时，它要检查系统是否已经完成了根节点枚举（或者是整个GC过程），如果完成了，那线程就继续执行，否则它就必须等待直到收到可以安全离开Safe Region的信号为止。 </p>
-<h4 id="3-7-垃圾收集器"><a href="#3-7-垃圾收集器" class="headerlink" title="3.7 垃圾收集器"></a>3.7 垃圾收集器</h4><p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm1.PNG" alt></p>
+<h4 id="3-7-垃圾收集器"><a href="#3-7-垃圾收集器" class="headerlink" title="3.7 垃圾收集器"></a>3.7 垃圾收集器</h4><p><img src="/img/gcm1.PNG" alt></p>
 <h5 id="3-7-1-Serial收集器"><a href="#3-7-1-Serial收集器" class="headerlink" title="3.7.1 Serial收集器"></a>3.7.1 Serial收集器</h5><p>Serial收集器是最基本、 发展历史最悠久的收集器，这个收集器是一个单线程的收集器，它进行垃圾收集时，必须暂停其他所有的工作线程，直到它收集结束。   </p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm2.PNG" alt></p>
+<p><img src="/img/gcm2.PNG" alt></p>
 <p>是虚拟机运行在Client模式下的默认<strong>新生代</strong>收集器。它也有着优于其他收集器的地方：简单而高效（与其他收集器的单线程比），对于限定单个CPU的环境来说，Serial收集器由于没有线程交互的开销，专心做垃圾收集自然可以获得最高的单线程收集效率。  Serial收集器对于运行在Client模式下的虚拟机来说是一个很好的选择。 </p>
 <h5 id="3-7-2-ParNew收集器"><a href="#3-7-2-ParNew收集器" class="headerlink" title="3.7.2 ParNew收集器"></a>3.7.2 ParNew收集器</h5><p>ParNew收集器其实就是Serial收集器的多线程版本。</p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm3.png" alt></p>
+<p><img src="/img/gcm3.png" alt></p>
 <blockquote>
 <p>除了Serial收集器外，目前只有它能与CMS收集器配合工作。  </p>
 </blockquote>
@@ -532,7 +532,7 @@ height:50vh;
 </ol>
 <h5 id="3-7-5-Parallel-Old收集器"><a href="#3-7-5-Parallel-Old收集器" class="headerlink" title="3.7.5 Parallel Old收集器"></a>3.7.5 Parallel Old收集器</h5><p>Parallel Old是Parallel Scavenge收集器的老年代版本，使用多线程和“标记-整理”算法 。</p>
 <p>Parallel Old收集器出现后，<strong>“吞吐量优先”收集器</strong>终于有了比较名副其实的应用组<br>合，在注重吞吐量以及CPU资源敏感的场合，都可以优先考虑<strong>Parallel Scavenge加Parallel Old</strong><br>收集器。 </p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm5.png" alt></p>
+<p><img src="/img/gcm5.png" alt></p>
 <h5 id="3-7-6-CMS收集器"><a href="#3-7-6-CMS收集器" class="headerlink" title="3.7.6 CMS收集器"></a>3.7.6 CMS收集器</h5><p>CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。 目前很大一部分的Java应用集中在互联网站或者B/S系统的服务端上，这类应用尤其重视服务的响应速度，希望系统停顿时间最短，以给用户带来较好的体验。 </p>
 <p>CMS收集器是基于“标记—清除”算法实现的，它的运作过程相对于前面几种收集器来说更复杂一些，整个过程分为4个步骤，包括：</p>
 <ol>
@@ -543,7 +543,7 @@ height:50vh;
 </ol>
 <p>其中，<strong>初始标记、 重新标记</strong>这两个步骤仍然需要“Stop The World”。 初始标记仅仅只是标记一下GC Roots能直接关联到的对象，速度很快，并发标记阶段就是进行GC RootsTracing的过程，而重新标记阶段则是为了<strong>修正</strong>并发标记期间因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录，这个阶段的停顿时间一般会比初始标记阶段稍长一些，但远比并发标记的时间短 </p>
 <p>由于整个过程中耗时最长的并发标记和并发清除过程收集器线程都可以与用户线程一起工作，所以，从总体上来说，CMS收集器的内存回收过程是与用户线程一起并发执行的。 </p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm6.png" alt></p>
+<p><img src="/img/gcm6.png" alt></p>
 <p><strong>缺点：</strong></p>
 <p>1.CMS收集器对CPU资源非常敏感。 其实，面向并发设计的程序都对CPU资源比较敏感。在并发阶段，它虽然不会导致用户线程停顿，但是会因为占用了一部分线程（或者说CPU资源）而导致应用程序变慢，总吞吐量会降低。  </p>
 <p>2.CMS收集器无法处理<strong>浮动垃圾</strong>（Floating Garbage），可能出现“Concurrent ModeFailure”失败而导致另一次Full GC的产生。 由于CMS并发清理阶段用户线程还在运行着，伴随程序运行自然就还会有新的垃圾不断产生，这一部分垃圾出现在标记过程之后，CMS无法在当次收集中处理掉它们，只好留待下一次GC时再清理掉。 这一部分垃圾就称为“浮动垃圾”。  因此CMS收集器不能像其他收集器那样等到老年代几乎完全被填满了再进行收集，需要<strong>预留一部分空间</strong>提供并发收集时的程序运作使用。 </p>
@@ -556,7 +556,7 @@ height:50vh;
 <li>可预测的停顿：这是G1相对于CMS的另一大优势 </li>
 </ol>
 <p>G1收集器的运作大致可划分为以下几个步骤：<br>初始标记（Initial Marking）<br>并发标记（Concurrent Marking）<br>最终标记（Final Marking）<br>筛选回收（Live Data Counting and Evacuation） </p>
-<p><img src="E:%5CStudy-Workplaces%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CJVM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Cgcm7.png" alt></p>
+<p><img src="/img/gcm7.png" alt></p>
 <h4 id="3-8-内存分配和回收策略"><a href="#3-8-内存分配和回收策略" class="headerlink" title="3.8 内存分配和回收策略"></a>3.8 内存分配和回收策略</h4><p> <strong>对象优先在Eden分配</strong> </p>
 <ul>
 <li><p>新生代GC（Minor GC）：指发生在新生代的垃圾收集动作，因为Java对象大多都具备朝生夕灭的特性，所以Minor GC非常频繁，一般回收速度也比较快。</p>
@@ -579,7 +579,7 @@ height:50vh;
             <p>原文作者：<a href="http://a991817.github.io">Dadada</a>
             </p><p>原文链接：<a href="http://a991817.github.io/2019/06/03/深入理解Java虚拟机学习笔记(1)/">http://a991817.github.io/2019/06/03/深入理解Java虚拟机学习笔记(1)/</a>
             </p><p>发表日期：<a href="http://a991817.github.io/2019/06/03/深入理解Java虚拟机学习笔记(1)/">June 3rd 2019, 11:19:51 pm</a>
-            </p><p>更新日期：<a href="http://a991817.github.io/2019/06/03/深入理解Java虚拟机学习笔记(1)/">June 3rd 2019, 11:34:09 pm</a>
+            </p><p>更新日期：<a href="http://a991817.github.io/2019/06/03/深入理解Java虚拟机学习笔记(1)/">June 3rd 2019, 11:39:32 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -588,16 +588,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/" title="深入理解Java虚拟机（2）">
-                    <div class="nextTitle">深入理解Java虚拟机（2）</div>
+                <a href="/2019/11/30/动态规划/" title>
+                    <div class="nextTitle">[Untitled Post]</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/06/03/Java 虚拟机内存区域与内存溢出/" title="Java 虚拟机内存区域与内存溢出">
-                    <div class="prevTitle">Java 虚拟机内存区域与内存溢出</div>
+                <a href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/" title="深入理解Java虚拟机（2）">
+                    <div class="prevTitle">深入理解Java虚拟机（2）</div>
                 </a>
             
         </li>
@@ -915,9 +915,30 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -930,6 +951,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span><a class="archive-post-title" href="/2019/11/30/动态规划/">[Untitled Post]</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -948,22 +974,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(1)/">深入理解Java虚拟机（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/">深入理解Java虚拟机（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/IntelliJ IDEA集成JProfiler/">IntelliJ IDEA集成JProfiler，入门教程</a>
+            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(1)/">深入理解Java虚拟机（1）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/Java 虚拟机内存区域与内存溢出/">Java 虚拟机内存区域与内存溢出</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/IntelliJ IDEA集成JProfiler/">IntelliJ IDEA集成JProfiler，入门教程</a>
         </li>
     
     
@@ -992,29 +1018,6 @@ top:50vh;
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/06/03/NIO 学习笔记/">NIO 学习</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">06/01</span><a class="archive-post-title" href="/2019/06/01/你好-Hexo/">你好,Hexo</a>
         </li>
@@ -1027,6 +1030,20 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">03/27</span><a class="archive-post-title" href="/2019/03/27/认识容器/">认识容器</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/06/03/NIO 学习笔记/">NIO 学习</a>
         </li>
     
     </ul></div>

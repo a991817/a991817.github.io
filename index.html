@@ -359,22 +359,41 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/">
+        <a class="abstract-title" href="/2019/11/30/动态规划/">
             
-                <span>深入理解Java虚拟机（2）</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            深入理解Java虚拟机第六章 类文件结构平台无关性、语言无关性
-6.1 Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流 
-根据Java虚拟机规范的规定，Class文件格式采用一种类似于C语言结构体的伪结构来存储数据，这种伪结构中只有两种数据类型：无符号数和表 
+            动态规划的特点计数
+有多少种方法走到右下角
+有多少种方法选出k个数，使得和是sum
 
-无符号数属于基本的数据类型，以u1、 u2、 u4、 u8来分别代表1个字节、 2个字节、 4个字节和8个字节的无符号数，无符号数可以用来描述数字、 索引引用、 数量值或者按照UTF-8编码构成字符串值。 
-表是由多个无符号数或者其他表作为数据项构成的复合数据类型，所有表都习惯性地以“_info”结尾。...
+求最大最小值
+从左上角走到右下角路径的最大数字和
+最长上升子序列长度
+
+求存在性
+取石子游戏，先手是否必胜
+能不能选出k个数，使得和是sum
+
+组成部分
+确定状态
+最后一步
+化成子问题
+
+
+转移方程
+初始条件
+边界情况
+技术顺序：一般都从下标小到大
+
+遇到字符串的问题，要想到从小的子串到大的子串。比如说寻找最长回文子串那道题目
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/03</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/30</span>
             </div>
             <!-- tags  -->
             
@@ -414,17 +433,17 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/06/03/Java 虚拟机内存区域与内存溢出/">
+        <a class="abstract-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/">
             
-                <span>Java 虚拟机内存区域与内存溢出</span>
+                <span>深入理解Java虚拟机（2）</span>
         </a>
         <div class="abstract-content">
-            Java 虚拟机内存区域与内存溢出
-1、程序计数器​    当线程在执行一个 Java 方法时，该计数器记录的是正在执行的虚拟机字节码指令的地址，当线程在执行的是 Native 方法（调用本地操作系统方法）时，该计数器的值为空。
-​    另外，该内存区域是唯一一个在 Java 虚拟机规范中没有规定任何 OOM（内存溢出：OutOfMemoryError）情况的区域。
-​    每条线程都有一个独立的的程序计数器
-2、Java虚拟机栈​    虚拟机栈描述的是 Java 方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈帧，栈是用于支持续虚拟机进行方法调用和方法执行的数据结构。
-...
+            深入理解Java虚拟机第六章 类文件结构平台无关性、语言无关性
+6.1 Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流 
+根据Java虚拟机规范的规定，Class文件格式采用一种类似于C语言结构体的伪结构来存储数据，这种伪结构中只有两种数据类型：无符号数和表 
+
+无符号数属于基本的数据类型，以u1、 u2、 u4、 u8来分别代表1个字节、 2个字节、 4个字节和8个字节的无符号数，无符号数可以用来描述数字、 索引引用、 数量值或者按照UTF-8编码构成字符串值。 
+表是由多个无符号数或者其他表作为数据项构成的复合数据类型，所有表都习惯性地以“_info”结尾。...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -454,6 +473,34 @@ height:50vh;
 安装jProfiler下载地址 http://www.ej-technologies.com/download/jprofiler/files
 本地安装
 next就可以了，注册码就直接网上找一个就可...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/03</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/06/03/Java 虚拟机内存区域与内存溢出/">
+            
+                <span>Java 虚拟机内存区域与内存溢出</span>
+        </a>
+        <div class="abstract-content">
+            Java 虚拟机内存区域与内存溢出
+1、程序计数器​    当线程在执行一个 Java 方法时，该计数器记录的是正在执行的虚拟机字节码指令的地址，当线程在执行的是 Native 方法（调用本地操作系统方法）时，该计数器的值为空。
+​    另外，该内存区域是唯一一个在 Java 虚拟机规范中没有规定任何 OOM（内存溢出：OutOfMemoryError）情况的区域。
+​    每条线程都有一个独立的的程序计数器
+2、Java虚拟机栈​    虚拟机栈描述的是 Java 方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈帧，栈是用于支持续虚拟机进行方法调用和方法执行的数据结构。
+...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -623,33 +670,6 @@ Java NIO可以让你非阻塞的使用IO，例如：当线程从通道读取数�
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/06/02/Spring学习/">
-            
-                <span>Spring 学习</span>
-        </a>
-        <div class="abstract-content">
-            Spring 技术内幕第一部分 IOC1.1 IOC容器的设计与实现：BeanFactory和ApplicationcontextBeanFactory:简单容器系列
-例：XmlBeanFactory，这个XmlBeanFactory的功能是建立在DefaultListableBeanFactory这个基本容器之上的。
-Applicationcontext：容器的高级形态
-1.2 IoC容器的初始化过程IoC容器的初始化是由refresh()方法来启动的。这个启动包括BeanDefinition的Resource定位、载入和注册三个基本过程
-1.2.1 Resource定位这个Resou...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/02</span>
             </div>
             <!-- tags  -->
             
@@ -1040,9 +1060,30 @@ Applicationcontext：容器的高级形态
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -1055,6 +1096,11 @@ Applicationcontext：容器的高级形态
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span><a class="archive-post-title" href="/2019/11/30/动态规划/">[Untitled Post]</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1073,22 +1119,22 @@ Applicationcontext：容器的高级形态
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(1)/">深入理解Java虚拟机（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(2)/">深入理解Java虚拟机（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/IntelliJ IDEA集成JProfiler/">IntelliJ IDEA集成JProfiler，入门教程</a>
+            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/深入理解Java虚拟机学习笔记(1)/">深入理解Java虚拟机（1）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/Java 虚拟机内存区域与内存溢出/">Java 虚拟机内存区域与内存溢出</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/03</span><a class="archive-post-title" href="/2019/06/03/IntelliJ IDEA集成JProfiler/">IntelliJ IDEA集成JProfiler，入门教程</a>
         </li>
     
     
@@ -1117,29 +1163,6 @@ Applicationcontext：容器的高级形态
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/06/03/NIO 学习笔记/">NIO 学习</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">06/01</span><a class="archive-post-title" href="/2019/06/01/你好-Hexo/">你好,Hexo</a>
         </li>
@@ -1152,6 +1175,20 @@ Applicationcontext：容器的高级形态
     
         <li class="archive-post-item">
             <span class="archive-post-date">03/27</span><a class="archive-post-title" href="/2019/03/27/认识容器/">认识容器</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/06/03/NIO 学习笔记/">NIO 学习</a>
         </li>
     
     </ul></div>

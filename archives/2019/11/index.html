@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -201,10 +203,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,34 +220,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Dadada's Blog.
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                Do one thing at a time, and do well.
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -359,189 +346,41 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/06/02/Spring学习/">
+        <a class="abstract-title" href="/2019/11/30/动态规划/">
             
-                <span>Spring 学习</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            Spring 技术内幕第一部分 IOC1.1 IOC容器的设计与实现：BeanFactory和ApplicationcontextBeanFactory:简单容器系列
-例：XmlBeanFactory，这个XmlBeanFactory的功能是建立在DefaultListableBeanFactory这个基本容器之上的。
-Applicationcontext：容器的高级形态
-1.2 IoC容器的初始化过程IoC容器的初始化是由refresh()方法来启动的。这个启动包括BeanDefinition的Resource定位、载入和注册三个基本过程
-1.2.1 Resource定位这个Resou...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/02</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/06/02/秒杀系统学习笔记/">
-            
-                <span>秒杀系统学习笔记</span>
-        </a>
-        <div class="abstract-content">
-            一、MD5的使用
-前端：添加两个js文件：
-jquery_v2.1.1.js
-jquery.md5.js
-1$.md5(src)
+            动态规划的特点计数
+有多少种方法走到右下角
+有多少种方法选出k个数，使得和是sum
 
-后端：添加依赖：
-123456789101112&lt;!-- https://mvnrepository.com/artifact/commons-codec/commons-codec --&gt;        &lt;dependency&gt;            &lt;groupId&gt;commons-codec&lt;/groupId&gt;            &lt;artifactId&gt;commons-codec&lt;/...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/02</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/06/01/firstBlog/">
-            
-                <span>First Blog</span>
-        </a>
-        <div class="abstract-content">
-            这是我的第一篇博客刘世杰真帅
+求最大最小值
+从左上角走到右下角路径的最大数字和
+最长上升子序列长度
+
+求存在性
+取石子游戏，先手是否必胜
+能不能选出k个数，使得和是sum
+
+组成部分
+确定状态
+最后一步
+化成子问题
+
+
+转移方程
+初始条件
+边界情况
+技术顺序：一般都从下标小到大
+
+遇到字符串的问题，要想到从小的子串到大的子串。比如说寻找最长回文子串那道题目
 
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/01</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/06/01/你好-Hexo/">
-            
-                <span>你好,Hexo</span>
-        </a>
-        <div class="abstract-content">
-            
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/01</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/06/01/hello-world/">
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-Mo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/01</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/27/HashSet,TreeSet和LinkedHashSet比较/">
-            
-                <span>HashSet,TreeSet和LinkedHashSet比较</span>
-        </a>
-        <div class="abstract-content">
-            HashSet,TreeSet和LinkedHashSet比较一、Set回顾一个不包括重复元素（包括可变对象）的Collection，是一种无序的集合。Set不包含满足 a.equals(b) 的元素对a和b，并且最多有一个null。
-1、不允许包含相同元素
-2、判断对象是否相同，根据equals方法
-
-无序测试测试一12345678910111213import java.util.*;public class Main &#123;    public static void main(String[] args) &#123;        Set&lt;Integer&gt; s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/27</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/27/认识容器/">
-            
-                <span>认识容器</span>
-        </a>
-        <div class="abstract-content">
-            认识容器Java的容器类主要由两个接口派生而出：Collection和Map。
-一、Collection vs Collections
-Collection 和 Collections 是两个不同的概念。
-
-
-Collection是容器层次结构中根接口。
-
-Collections是一个提供一些处理容器类静态方法的类。
-
-
-JDK不提供Collection接口的具体实现，而是提供了更加具体的子接口（如Set和List）实现。
-那Collection接口存在有何作用呢？
-原因在于：所有容器的实现类（如ArrayList实现了List接口，HashSet实现了Set接口）提供了两个‘标准’的构...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/30</span>
             </div>
             <!-- tags  -->
             
@@ -550,109 +389,8 @@ JDK不提供Collection接口的具体实现，而是提供了更加具体的子�
     
     <!-- paginator  -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-    
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="/avatar/zgr.jpg">
-    <div class="profile-name">哒哒哒</div>
-    
-    <div class="profile-signature">
-        Dadada
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:981502062@qq.com" class="iconfont-archer email" title="email"></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/a991817" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="/assets/wechat.jpg">
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.baidu.com" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.google.com" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
