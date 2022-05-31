@@ -13,33 +13,33 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="数据结构简单动态字符串SDS跟C语言一样是个char字符数组； 一个sds对象有free、len属性记录空余空间和当前字符串长度 示例图 特点 常数复杂度获取字符串长度直接从free、len属性获取  杜绝缓冲区溢出C语言字符串拼接时都假定分配的内存足够，如果这个假定不成立就会产生缓冲区溢出；当SDS API需要对SDS进行修改时，API会先检查SDS的空间是否满足修改所需的要求，如果不满足的话，">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png">
-<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png">
+<meta property="og:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png">
 <meta property="article:published_time" content="2022-05-31T03:09:28.201Z">
-<meta property="article:modified_time" content="2022-05-31T03:30:01.845Z">
+<meta property="article:modified_time" content="2022-05-31T03:37:35.822Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
+<meta name="twitter:image" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -110,7 +110,7 @@
       
         <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="简单动态字符串"><a href="#简单动态字符串" class="headerlink" title="简单动态字符串"></a>简单动态字符串</h3><p>SDS跟C语言一样是个char字符数组；</p>
 <p>一个sds对象有free、len属性记录空余空间和当前字符串长度</p>
-<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png" alt="image-20211221122226731"></p>
+<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png" alt="image-20211221122226731"></p>
 <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
 <li><p><strong>常数复杂度获取字符串长度</strong><br>直接从free、len属性获取</p>
 </li>
@@ -133,7 +133,7 @@
 <p>如果我们有一个保存文本数据的SDS值sds，那么我们就可以重用＜string.h＞&#x2F;strcasecmp函数，使用它来对比SDS保存的字符串和另一个C字符串：</p>
 </li>
 </ul>
-<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h4 id="示例图-1"><a href="#示例图-1" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png" alt="image-20211221123652853"></p>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h4 id="示例图-1"><a href="#示例图-1" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png" alt="image-20211221123652853"></p>
 <h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ul>
 <li>双端</li>
 <li>无环</li>
@@ -141,7 +141,7 @@
 <li>带长度计数器</li>
 <li>多态；可以保存不通类型的值</li>
 </ul>
-<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="示例图-2"><a href="#示例图-2" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png" alt="image-20211221124137128"></p>
+<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="示例图-2"><a href="#示例图-2" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png" alt="image-20211221124137128"></p>
 <p>ht属性是一个包含两个项的数组，数组中的每个项都是一个dictht哈希表，一般情况下，字典只使用ht[0]哈希表，ht[1]哈希表只会在对ht[0]哈希表进行rehash时使用。</p>
 <h4 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h4><ol>
 <li><p>服务器目前没有在执行BGSAVE命令或者BGREWRITEAOF命令，并且哈希表的负载因子大于等于1。</p>
@@ -157,33 +157,33 @@
 <p>4）随着字典操作的不断执行，最终在某个时间点上，ht[0]的所有键值对都会被rehash至ht[1]，这时程序将rehashidx属性的值设为-1，表示rehash操作已完成。</p>
 <p>渐进式rehash的好处在于它采取分而治之的方式，将rehash键值对所需的计算工作均摊到对字典的每个添加、删除、查找和更新操作上，从而避免了集中式rehash而带来的庞大计算量。</p>
 <p>另外，在渐进式rehash执行期间，新添加到字典的键值对一律**会被保存到ht[1]**里面，而ht[0]则不再进行任何添加操作，这一措施保证了ht[0]包含的键值对数量会只减不增，并随着rehash操作的执行而最终变成空表。</p>
-<h3 id="跳跃表"><a href="#跳跃表" class="headerlink" title="跳跃表"></a>跳跃表</h3><h4 id="示例图-3"><a href="#示例图-3" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png" alt="image-20211223121705566"></p>
+<h3 id="跳跃表"><a href="#跳跃表" class="headerlink" title="跳跃表"></a>跳跃表</h3><h4 id="示例图-3"><a href="#示例图-3" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png" alt="image-20211223121705566"></p>
 <p>Redis只在两个地方用到了跳跃表，一个是实现有序集合键，另一个是在集群节点中用作内部数据结构。</p>
 <p>每个跳跃表节点的层高都是1至32之间的随机数</p>
 <h3 id="整数集合"><a href="#整数集合" class="headerlink" title="整数集合"></a>整数集合</h3><p>整数集合（intset）是集合键的底层实现之一，当一个集合<strong>只包含整数值元素</strong>，并且这个集合的<strong>元素数量不多</strong>时，Redis就会使用整数集合作为集合键的底层实现。</p>
-<h4 id="示例图-4"><a href="#示例图-4" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png" alt="image-20211223122023914"></p>
+<h4 id="示例图-4"><a href="#示例图-4" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png" alt="image-20211223122023914"></p>
 <p>当向一个底层为int16_t数组的整数集合添加一个int64_t类型的整数值时，整数集合已有的所有元素都会被转换成int64_t类型</p>
 <h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><p>类型：int16_t，int32_t，int64_t</p>
 <p>当向一个底层为int16_t数组的整数集合添加一个int64_t类型的整数值时，整数集合已有的所有元素都会被转换成int64_t类型；</p>
 <p>整数集合<strong>不支持降级</strong>操作，一旦对数组进行了升级，编码就会一直保持升级后的状态。</p>
 <p><strong>好处</strong>：整数集合的升级策略有两个好处，一个是提升整数集合的灵活性，另一个是尽可能地节约内存。</p>
 <h3 id="压缩列表"><a href="#压缩列表" class="headerlink" title="压缩列表"></a>压缩列表</h3><p>压缩列表（ziplist）是列表键和哈希键的底层实现之一。当一个列表键只包含少量列表项，并且每个列表项要么就是小整数值，要么就是长度比较短的字符串，那么Redis就会使用压缩列表来做列表键的底层实现</p>
-<h4 id="示例图-5"><a href="#示例图-5" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png" alt="image-20211223122749578"></p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png" alt="image-20211223123006023"></p>
+<h4 id="示例图-5"><a href="#示例图-5" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png" alt="image-20211223122749578"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png" alt="image-20211223123006023"></p>
 <h4 id="连锁更新"><a href="#连锁更新" class="headerlink" title="连锁更新"></a>连锁更新</h4><p>每个节点的previous_entry_length属性都记录了前一个节点的长度：</p>
 <p>❑如果前一节点的长度小于254字节，那么previous_entry_length属性需要用1字节长的空间来保存这个长度值。</p>
 <p>❑如果前一节点的长度大于等于254字节，那么previous_entry_length属性需要用5字节长的空间来保存这个长度值。</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png" alt="image-20211223123127507"></p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png" alt="image-20211223123242022"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png" alt="image-20211223123127507"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png" alt="image-20211223123242022"></p>
 <h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>Redis的对象系统还实现了基于引用计数技术的内存回收机制，当程序不再使用某个对象的时候，这个对象所占用的内存就会被自动释放；</p>
-<h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png" alt="image-20211223123903740"></p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png" alt="image-20211223123845793"></p>
+<h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png" alt="image-20211223123903740"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png" alt="image-20211223123845793"></p>
 <h4 id="共享对象"><a href="#共享对象" class="headerlink" title="共享对象"></a>共享对象</h4><p>Redis只对包含整数值的字符串对象进行共享。</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png" alt="image-20211223124409476"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png" alt="image-20211223124409476"></p>
 <p>假设键A创建了一个包含整数值100的字符串对象作为值对象，如果这时键B也要创建一个同样保存了整数值100的字符串对象作为值对象，那么服务器让键A和键B共享同一个字符串对象；</p>
 <p>Redis会在初始化服务器时，创建一万个字符串对象，这些对象包含了从0到9999的所有整数值，当服务器需要用到值为0到9999的字符串对象时，服务器就会使用这些共享对象，而不是新创建对象。</p>
-<h1 id="第二部分：单机数据库的实现"><a href="#第二部分：单机数据库的实现" class="headerlink" title="第二部分：单机数据库的实现"></a>第二部分：单机数据库的实现</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h4 id="示例图-6"><a href="#示例图-6" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png" alt="image-20211224121242433"></p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png" alt="image-20211224121349312"></p>
+<h1 id="第二部分：单机数据库的实现"><a href="#第二部分：单机数据库的实现" class="headerlink" title="第二部分：单机数据库的实现"></a>第二部分：单机数据库的实现</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h4 id="示例图-6"><a href="#示例图-6" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png" alt="image-20211224121242433"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png" alt="image-20211224121349312"></p>
 <h4 id="过期时间"><a href="#过期时间" class="headerlink" title="过期时间"></a>过期时间</h4><p>保存过期时间</p>
 <p>redisDb结构的expires字典保存了数据库中所有键的过期时间，我们称这个字典为过期字典：</p>
 <p>❑过期字典的键是一个指针，这个指针指向键空间中的某个键对象（也即是某个数据库键）。</p>
@@ -220,11 +220,11 @@
 <h3 id="RDB载入"><a href="#RDB载入" class="headerlink" title="RDB载入"></a>RDB载入</h3><p>启动的时候自动载入</p>
 <p>如果服务器开启了AOF持久化功能，那么服务器会<strong>优先使用AOF文件</strong>来还原数据库状态。只有在AOF持久化功能处于关闭状态时，服务器才会使用RDB文件来还原数据库状态。</p>
 <h3 id="自动保存"><a href="#自动保存" class="headerlink" title="自动保存"></a>自动保存</h3><p>因为BGSAVE命令可以在不阻塞服务器进程的情况下执行，所以Redis允许用户通过设置服务器配置的save选项，让服务器每隔一段时间自动执行一次BGSAVE命令。</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png" alt="image-20211224123718806"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png" alt="image-20211224123718806"></p>
 <h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>数据库维护dirty计数器和lastsave属性</p>
 <p>Redis的服务器周期性操作函数<strong>serverCron</strong>默认每隔100毫秒就会执行一次，该函数用于对正在运行的服务器进行维护，它的其中一项工作就是检查save选项所设置的保存条件是否已经满足，如果满足的话，就执行BGSAVE命令。</p>
 <h2 id="AOF持久化"><a href="#AOF持久化" class="headerlink" title="AOF持久化"></a>AOF持久化</h2><h3 id="AOF文件的写入与同步"><a href="#AOF文件的写入与同步" class="headerlink" title="AOF文件的写入与同步"></a>AOF文件的写入与同步</h3><p>因为服务器在处理文件事件时可能会执行写命令，使得一些内容被追加到aof_buf缓冲区里面，所以在服务器每次结束一个事件循环之前，它都会调用fushAppendOnlyFile函数，考虑是否需要将aof_buf缓冲区中的内容写入和保存到AOF文件里面</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png" alt="image-20211227121109237"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png" alt="image-20211227121109237"></p>
 <h3 id="AOF文件的载入与数据还原"><a href="#AOF文件的载入与数据还原" class="headerlink" title="AOF文件的载入与数据还原"></a>AOF文件的载入与数据还原</h3><p>Redis读取AOF文件并还原数据库状态的详细步骤如下：</p>
 <p>1）创建一个不带网络连接的伪客户端（fake client）</p>
 <p>2）从AOF文件中分析并读取出一条写命令。</p>
@@ -246,7 +246,7 @@
 <li><p>时间事件（time event）：Redis服务器中的一些操作（比如serverCron函数）需要在给定的时间点执行，而时间事件就是服务器对这类定时操作的抽象。</p>
 </li>
 </ul>
-<h3 id="文件事件"><a href="#文件事件" class="headerlink" title="文件事件"></a>文件事件</h3><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png" alt="image-20211227122435497"></p>
+<h3 id="文件事件"><a href="#文件事件" class="headerlink" title="文件事件"></a>文件事件</h3><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png" alt="image-20211227122435497"></p>
 <p>尽管多个文件事件可能会并发地出现，但I&#x2F;O多路复用程序总是会将所有产生事件的套接字都放到一个队列里面，然后通过这个队列，以有序（sequentially）、同步（synchronously）、每次一个套接字的方式向文件事件分派器传送套接字</p>
 <h4 id="文件事件的处理器"><a href="#文件事件的处理器" class="headerlink" title="文件事件的处理器"></a>文件事件的处理器</h4><p>Redis为文件事件编写了多个处理器，这些事件处理器分别用于实现不同的网络通信需求，比如说：</p>
 <ul>
@@ -285,7 +285,7 @@
 <li>客户端的身份验证标志。</li>
 <li>客户端的创建时间，客户端和服务器最后一次通信的时间，以及客户端的输出缓冲区大小超出软性限制（soft limit）的时间。</li>
 </ol>
-<h3 id="示例图-7"><a href="#示例图-7" class="headerlink" title="示例图"></a>示例图</h3><p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png" alt="image-20220108142751976"></p>
+<h3 id="示例图-7"><a href="#示例图-7" class="headerlink" title="示例图"></a>示例图</h3><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png" alt="image-20220108142751976"></p>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>通常情况下，Redis只会将那些对数据库进行了修改的命令写入到AOF文件，并复制到各个从服务器。如果一个命令没有对数据库进行任何修改，那么它就会被认为是只读命令，这个命令不会被写入到AOF文件，也不会被复制到从服务器。</p>
 <p>以上规则适用于绝大部分Redis命令，但PUBSUB命令和SCRIPT LOAD命令是其中的例外。PUBSUB命令虽然没有修改数据库，但PUBSUB命令向频道的所有订阅者发送消息这一行为带有副作用，接收到消息的所有客户端的状态都会因为这个命令而改变。因此，服务器需要使用REDIS_FORCE_AOF标志，强制将这个命令写入AOF文件，这样在将来载入AOF文件时，服务器就可以再次执行相同的PUBSUB命令，并产生相同的副作用。</p>
 <h3 id="伪客户端"><a href="#伪客户端" class="headerlink" title="伪客户端"></a>伪客户端</h3><ol>
@@ -298,7 +298,7 @@
 </ol>
 <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><h3 id="命令请求的执行过程（重要）"><a href="#命令请求的执行过程（重要）" class="headerlink" title="命令请求的执行过程（重要）"></a>命令请求的执行过程（重要）</h3><ol>
 <li><p>发送命令请求</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png" alt="image-20220108144056270"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png" alt="image-20220108144056270"></p>
 </li>
 <li><p>读取命令请求<br>当客户端与服务器之间的<strong>连接套接字</strong>因为客户端的写入而变得<strong>可读</strong>时，服务器将调用<strong>命令请求处理器</strong>来执行以下操作：</p>
 <ul>
@@ -356,14 +356,14 @@
 <li>当主服务器的BGSAVE命令执行完毕时，主服务器会将BGSAVE命令生成的RDB文件发送给从服务器，从服务器接收并载入这个RDB文件，将自己的数据库状态更新至主服务器执行BGSAVE命令时的数据库状态。</li>
 <li>主服务器将记录在缓冲区里面的所有写命令发送给从服务器，从服务器执行这些写命令，将自己的数据库状态更新至主服务器数据库当前所处的状态。</li>
 </ol>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png" alt="image-20220108150337037"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png" alt="image-20220108150337037"></p>
 <h5 id="命令传播"><a href="#命令传播" class="headerlink" title="命令传播"></a>命令传播</h5><p>为了让主从服务器再次回到一致状态，主服务器需要对从服务器执行命令传播操作：主服务器会将自己执行的写命令，也即是造成主从服务器不一致的那条写命令，发送给从服务器执行，当从服务器执行了相同的写命令之后，主从服务器将再次回到一致状态。</p>
 <h5 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h5><p>SYNC命令是一个非常耗费资源的操作（主服务器需要生成RDB文件，从服务器需要载入RDB文件，网络需要传输RDB文件）；当从服务器断线重连之后，需要通过SYNC从头同步整个数据库。</p>
 <h4 id="新版复制功能"><a href="#新版复制功能" class="headerlink" title="新版复制功能"></a>新版复制功能</h4><p>使用PSYNC命令代替SYNC命令来执行复制时的同步操作。PSYNC命令具有完整重同步（full resynchronization）和部分重同步（partialresynchronization）两种模式。</p>
 <h5 id="完整重同步"><a href="#完整重同步" class="headerlink" title="完整重同步"></a>完整重同步</h5><p>用于初次复制的情况</p>
 <h5 id="部分重同步"><a href="#部分重同步" class="headerlink" title="部分重同步"></a>部分重同步</h5><p>主服务器维护一个固定长度的<strong>复制积压缓冲区</strong></p>
 <p>从服务器断线重新复制的时候，告诉主服务器复制的偏移量，主服务器如果发现断线期间新增的数据还在<strong>复制积压缓冲区</strong>中，则会执行部分重同步，否则执行完整重同步。</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png" alt="image-20220108150821262"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png" alt="image-20220108150821262"></p>
 <h2 id="Sentinel"><a href="#Sentinel" class="headerlink" title="Sentinel"></a>Sentinel</h2><p>Sentinel（哨岗、哨兵）是Redis的<strong>高可用性</strong>（high availability）解决方案：由一个或多个Sentinel实例（instance）组成的Sentinel系统（system）可以监视任意多个主服务器，以及这些主服务器属下的所有从服务器，并在被监视的主服务器进入下线状态时，自动将下线主服务器属下的某个从服务器升级为新的主服务器，然后由新的主服务器代替已下线的主服务器继续处理命令请求。</p>
 <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><h4 id="启动并初始化Sentinel"><a href="#启动并初始化Sentinel" class="headerlink" title="启动并初始化Sentinel"></a>启动并初始化Sentinel</h4><ol>
 <li><p>首先，因为Sentinel本质上只是一个运行在特殊模式下的Redis服务器，所以启动Sentinel的第一步，就是初始化一个普通的Redis服务器。</p>
@@ -418,7 +418,7 @@
 <p>当节点A通过消息从节点B那里接收到节点B的slots数组时，节点A会在自己的clusterState.nodes字典中查找节点B对应的clusterNode结构，并对结构中的slots数组进行<strong>保存或者更新</strong>。</p>
 <h4 id="记录集群所有槽的指派信息"><a href="#记录集群所有槽的指派信息" class="headerlink" title="记录集群所有槽的指派信息"></a>记录集群所有槽的指派信息</h4><p>clusterState结构中的slots数组记录了集群中所有16384个槽的指派信息</p>
 <p>slots数组包含16384个项，每个数组项都是一个指向clusterNode结构的指针：</p>
-<p><img src="/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png" alt="image-20220108154212058"></p>
+<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png" alt="image-20220108154212058"></p>
 <h4 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h4><p>clusterNode.slots数组和clusterState.slots数组都保存了槽指派信息；为什么分两份存，主要是考虑操作性能。</p>
 <h3 id="在集群中执行命令"><a href="#在集群中执行命令" class="headerlink" title="在集群中执行命令"></a>在集群中执行命令</h3><p>当客户端向节点发送与数据库键有关的命令时，接收命令的节点会计算出命令要处理的数据库键属于哪个槽，并检查这个槽是否指派给了自己：</p>
 <ol>
