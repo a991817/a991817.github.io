@@ -1,518 +1,922 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="Hexo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    <title>Hexo</title>
+    <link rel="icon" type="image/png" href="/a991817/a991817.github.io.git/favicon.png">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/a991817/a991817.github.io.git/css/my.css">
 
-  
-<meta name="generator" content="Hexo 6.2.0"></head>
+    <script src="/a991817/a991817.github.io.git/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/a991817/a991817.github.io.git/" class="waves-effect waves-light">
+                    
+                    <img src="/a991817/a991817.github.io.git/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/a991817/a991817.github.io.git/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/a991817/a991817.github.io.git/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <ul class="menu-list mobile-menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/a991817/a991817.github.io.git/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Redis设计与实现笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-05-31T03:09:28.201Z" itemprop="datePublished">2022-05-31</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="简单动态字符串"><a href="#简单动态字符串" class="headerlink" title="简单动态字符串"></a>简单动态字符串</h3><p>SDS跟C语言一样是个char字符数组；</p>
-<p>一个sds对象有free、len属性记录空余空间和当前字符串长度</p>
-<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png" alt="image-20211221122226731"></p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
-<li><p><strong>常数复杂度获取字符串长度</strong><br>直接从free、len属性获取</p>
-</li>
-<li><p><strong>杜绝缓冲区溢出</strong><br>C语言字符串拼接时都假定分配的内存足够，如果这个假定不成立就会产生缓冲区溢出；<br>当SDS API需要对SDS进行修改时，API会先检查SDS的空间是否满足修改所需的要求，如果不满足的话，<strong>API会自动将SDS的空间扩展至执行修改所需的大小</strong>，然后才执行实际的修改操作，所以使用SDS既不需要手动修改SDS的空间大小，也不会出现前面所说的缓冲区溢出问题</p>
-</li>
-<li><p><strong>减少修改字符串时带来的内存重分配次数</strong></p>
-<p>有两种手段：</p>
-<ol>
-<li><p>空间预分配<br>扩容的时候，会比所需的内存多分配一部分空闲内存（有两种公示决定额外分配多少内存）</p>
-</li>
-<li><p>惰性空间释放</p>
-<p>sds字符串缩短之后，内存不是马上回收，而是作为空闲内存保存</p>
-</li>
-</ol>
-</li>
-<li><p><strong>二进制安全</strong></p>
-<p>C字符串中的字符必须符合某种编码（比如ASCII）；sds没有这个限制；</p>
-</li>
-<li><p><strong>兼容部分C字符串函数</strong></p>
-<p>如果我们有一个保存文本数据的SDS值sds，那么我们就可以重用＜string.h＞&#x2F;strcasecmp函数，使用它来对比SDS保存的字符串和另一个C字符串：</p>
-</li>
-</ul>
-<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h4 id="示例图-1"><a href="#示例图-1" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png" alt="image-20211221123652853"></p>
-<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ul>
-<li>双端</li>
-<li>无环</li>
-<li>带表头、表尾指针</li>
-<li>带长度计数器</li>
-<li>多态；可以保存不通类型的值</li>
-</ul>
-<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="示例图-2"><a href="#示例图-2" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png" alt="image-20211221124137128"></p>
-<p>ht属性是一个包含两个项的数组，数组中的每个项都是一个dictht哈希表，一般情况下，字典只使用ht[0]哈希表，ht[1]哈希表只会在对ht[0]哈希表进行rehash时使用。</p>
-<h4 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h4><ol>
-<li><p>服务器目前没有在执行BGSAVE命令或者BGREWRITEAOF命令，并且哈希表的负载因子大于等于1。</p>
-</li>
-<li><p>服务器目前正在执行BGSAVE命令或者BGREWRITEAOF命令，并且哈希表的负载因子大于等于5。</p>
-</li>
-</ol>
-<h4 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h4><p>当哈希表的负载因子小于0.1时，程序自动开始对哈希表执行收缩操作。</p>
-<h4 id="渐进式rehash"><a href="#渐进式rehash" class="headerlink" title="渐进式rehash"></a>渐进式rehash</h4><p>以下是哈希表渐进式rehash的详细步骤：</p>
-<p>1）为ht[1]分配空间，让字典同时持有ht[0]和ht[1]两个哈希表。</p>
-<p>2）在字典中维持一个索引计数器变量rehashidx，并将它的值设置为0，表示rehash工作正式开始。</p>
-<p>3）在rehash进行期间，每次对字典执行添加、删除、查找或者更新操作时，程序除了执行指定的操作以外，还会顺带将ht[0]哈希表在rehashidx索引上的所有键值对rehash到ht[1]，当rehash工作完成之后，程序将rehashidx属性的值增一。</p>
-<p>4）随着字典操作的不断执行，最终在某个时间点上，ht[0]的所有键值对都会被rehash至ht[1]，这时程序将rehashidx属性的值设为-1，表示rehash操作已完成。</p>
-<p>渐进式rehash的好处在于它采取分而治之的方式，将rehash键值对所需的计算工作均摊到对字典的每个添加、删除、查找和更新操作上，从而避免了集中式rehash而带来的庞大计算量。</p>
-<p>另外，在渐进式rehash执行期间，新添加到字典的键值对一律**会被保存到ht[1]**里面，而ht[0]则不再进行任何添加操作，这一措施保证了ht[0]包含的键值对数量会只减不增，并随着rehash操作的执行而最终变成空表。</p>
-<h3 id="跳跃表"><a href="#跳跃表" class="headerlink" title="跳跃表"></a>跳跃表</h3><h4 id="示例图-3"><a href="#示例图-3" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png" alt="image-20211223121705566"></p>
-<p>Redis只在两个地方用到了跳跃表，一个是实现有序集合键，另一个是在集群节点中用作内部数据结构。</p>
-<p>每个跳跃表节点的层高都是1至32之间的随机数</p>
-<h3 id="整数集合"><a href="#整数集合" class="headerlink" title="整数集合"></a>整数集合</h3><p>整数集合（intset）是集合键的底层实现之一，当一个集合<strong>只包含整数值元素</strong>，并且这个集合的<strong>元素数量不多</strong>时，Redis就会使用整数集合作为集合键的底层实现。</p>
-<h4 id="示例图-4"><a href="#示例图-4" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png" alt="image-20211223122023914"></p>
-<p>当向一个底层为int16_t数组的整数集合添加一个int64_t类型的整数值时，整数集合已有的所有元素都会被转换成int64_t类型</p>
-<h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><p>类型：int16_t，int32_t，int64_t</p>
-<p>当向一个底层为int16_t数组的整数集合添加一个int64_t类型的整数值时，整数集合已有的所有元素都会被转换成int64_t类型；</p>
-<p>整数集合<strong>不支持降级</strong>操作，一旦对数组进行了升级，编码就会一直保持升级后的状态。</p>
-<p><strong>好处</strong>：整数集合的升级策略有两个好处，一个是提升整数集合的灵活性，另一个是尽可能地节约内存。</p>
-<h3 id="压缩列表"><a href="#压缩列表" class="headerlink" title="压缩列表"></a>压缩列表</h3><p>压缩列表（ziplist）是列表键和哈希键的底层实现之一。当一个列表键只包含少量列表项，并且每个列表项要么就是小整数值，要么就是长度比较短的字符串，那么Redis就会使用压缩列表来做列表键的底层实现</p>
-<h4 id="示例图-5"><a href="#示例图-5" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png" alt="image-20211223122749578"></p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png" alt="image-20211223123006023"></p>
-<h4 id="连锁更新"><a href="#连锁更新" class="headerlink" title="连锁更新"></a>连锁更新</h4><p>每个节点的previous_entry_length属性都记录了前一个节点的长度：</p>
-<p>❑如果前一节点的长度小于254字节，那么previous_entry_length属性需要用1字节长的空间来保存这个长度值。</p>
-<p>❑如果前一节点的长度大于等于254字节，那么previous_entry_length属性需要用5字节长的空间来保存这个长度值。</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png" alt="image-20211223123127507"></p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png" alt="image-20211223123242022"></p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>Redis的对象系统还实现了基于引用计数技术的内存回收机制，当程序不再使用某个对象的时候，这个对象所占用的内存就会被自动释放；</p>
-<h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png" alt="image-20211223123903740"></p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png" alt="image-20211223123845793"></p>
-<h4 id="共享对象"><a href="#共享对象" class="headerlink" title="共享对象"></a>共享对象</h4><p>Redis只对包含整数值的字符串对象进行共享。</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png" alt="image-20211223124409476"></p>
-<p>假设键A创建了一个包含整数值100的字符串对象作为值对象，如果这时键B也要创建一个同样保存了整数值100的字符串对象作为值对象，那么服务器让键A和键B共享同一个字符串对象；</p>
-<p>Redis会在初始化服务器时，创建一万个字符串对象，这些对象包含了从0到9999的所有整数值，当服务器需要用到值为0到9999的字符串对象时，服务器就会使用这些共享对象，而不是新创建对象。</p>
-<h1 id="第二部分：单机数据库的实现"><a href="#第二部分：单机数据库的实现" class="headerlink" title="第二部分：单机数据库的实现"></a>第二部分：单机数据库的实现</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h4 id="示例图-6"><a href="#示例图-6" class="headerlink" title="示例图"></a>示例图</h4><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png" alt="image-20211224121242433"></p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png" alt="image-20211224121349312"></p>
-<h4 id="过期时间"><a href="#过期时间" class="headerlink" title="过期时间"></a>过期时间</h4><p>保存过期时间</p>
-<p>redisDb结构的expires字典保存了数据库中所有键的过期时间，我们称这个字典为过期字典：</p>
-<p>❑过期字典的键是一个指针，这个指针指向键空间中的某个键对象（也即是某个数据库键）。</p>
-<p>❑过期字典的值是一个long long类型的整数，这个整数保存了键所指向的数据库键的过期时间——一个毫秒精度的UNIX时间戳。</p>
-<h5 id="过期键删除策略"><a href="#过期键删除策略" class="headerlink" title="过期键删除策略"></a>过期键删除策略</h5><p>Redis服务器实际使用的是<strong>惰性删除</strong>和<strong>定期删除</strong>两种策略：通过配合使用这两种删除策略，服务器可以很好地在合理使用CPU时间和避免浪费内存空间之间取得平衡。</p>
-<ul>
-<li><p>惰性删除</p>
-<p>操作键的时候判断一下键是否过期，如果过期了则删除键，并且按照键不存在的方式处理命令</p>
-</li>
-<li><p>定期删除<br>过期键的定期删除策略由redis.c&#x2F;activeExpireCycle函数实现，每当Redis的服务器周期性操作redis.c&#x2F;serverCron函数执行时，activeExpireCycle函数就会被调用，<strong>它在规定的时间内，分多次遍历服务器中的各个数据库</strong>，从数据库的expires字典中<strong>随机</strong>检查一部分键的过期时间，并删除其中的过期键。</p>
-</li>
-</ul>
-<h5 id="AOF、RDB和复制功能对过期键的处理"><a href="#AOF、RDB和复制功能对过期键的处理" class="headerlink" title="AOF、RDB和复制功能对过期键的处理"></a>AOF、RDB和复制功能对过期键的处理</h5><ul>
-<li><p>生成RDB文件<br>  在执行SAVE命令或者BGSAVE命令创建一个新的RDB文件时，程序会对数据库中的键进行检查，<strong>已过期的键不会被保存</strong>到新创建的RDB文件中。</p>
-</li>
-<li><p>载入RDB文件</p>
-<p>如果服务器以主服务器模式运行，那么在载入RDB文件时，程序会对文件中保存的键进行检查，未过期的键会被载入到数据库中，而<strong>过期键则会被忽略，所以过期键对载入RDB文件的主服务器不会造成影响</strong>。如果是从服务器模式的话会<strong>所有键都载入</strong>，但是因为进行数据同步的时候从服务器的数据库会被清空，所以不会对数据库造成影响。</p>
-</li>
-<li><p>AOF文件写入<br>当过期键被惰性删除或者定期删除之后，程序会向AOF文件追加（append）一条DEL命令，来显式地记录该键已被删除。</p>
-</li>
-<li><p>AOF重写<br>和生成RDB文件时类似，在执行AOF重写的过程中，程序会对数据库中的键进行检查，<strong>已过期的键不会被保存到重写后的AOF文件中。</strong></p>
-</li>
-<li><p>复制<br>主服务器在删除一个过期键之后，会显式地向所有从服务器发送一个DEL命令，告知从服务器删除这个过期键。从服务器只有在接到主服务器发来的DEL命令之后，才会删除过期键。</p>
-</li>
-</ul>
-<h2 id="RDB持久化"><a href="#RDB持久化" class="headerlink" title="RDB持久化"></a>RDB持久化</h2><p>RDB文件是一个经过压缩的二进制文件，由多个部分组成</p>
-<p>有两个Redis命令可以用于生成RDB文件，一个是SAVE，另一个是BGSAVE。</p>
-<ul>
-<li><p>SAVE<br>SAVE命令会阻塞Redis服务器进程，直到RDB文件创建完毕为止，在服务器进程阻塞期间，服务器不能处理任何命令请求</p>
-</li>
-<li><p>BGSAVE<br>BGSAVE命令会派生出一个子进程，然后由子进程负责创建RDB文件，服务器进程（父进程）继续处理命令请求</p>
-</li>
-</ul>
-<h3 id="RDB载入"><a href="#RDB载入" class="headerlink" title="RDB载入"></a>RDB载入</h3><p>启动的时候自动载入</p>
-<p>如果服务器开启了AOF持久化功能，那么服务器会<strong>优先使用AOF文件</strong>来还原数据库状态。只有在AOF持久化功能处于关闭状态时，服务器才会使用RDB文件来还原数据库状态。</p>
-<h3 id="自动保存"><a href="#自动保存" class="headerlink" title="自动保存"></a>自动保存</h3><p>因为BGSAVE命令可以在不阻塞服务器进程的情况下执行，所以Redis允许用户通过设置服务器配置的save选项，让服务器每隔一段时间自动执行一次BGSAVE命令。</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png" alt="image-20211224123718806"></p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>数据库维护dirty计数器和lastsave属性</p>
-<p>Redis的服务器周期性操作函数<strong>serverCron</strong>默认每隔100毫秒就会执行一次，该函数用于对正在运行的服务器进行维护，它的其中一项工作就是检查save选项所设置的保存条件是否已经满足，如果满足的话，就执行BGSAVE命令。</p>
-<h2 id="AOF持久化"><a href="#AOF持久化" class="headerlink" title="AOF持久化"></a>AOF持久化</h2><h3 id="AOF文件的写入与同步"><a href="#AOF文件的写入与同步" class="headerlink" title="AOF文件的写入与同步"></a>AOF文件的写入与同步</h3><p>因为服务器在处理文件事件时可能会执行写命令，使得一些内容被追加到aof_buf缓冲区里面，所以在服务器每次结束一个事件循环之前，它都会调用fushAppendOnlyFile函数，考虑是否需要将aof_buf缓冲区中的内容写入和保存到AOF文件里面</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png" alt="image-20211227121109237"></p>
-<h3 id="AOF文件的载入与数据还原"><a href="#AOF文件的载入与数据还原" class="headerlink" title="AOF文件的载入与数据还原"></a>AOF文件的载入与数据还原</h3><p>Redis读取AOF文件并还原数据库状态的详细步骤如下：</p>
-<p>1）创建一个不带网络连接的伪客户端（fake client）</p>
-<p>2）从AOF文件中分析并读取出一条写命令。</p>
-<p>3）使用伪客户端执行被读出的写命令。</p>
-<p>4）一直执行步骤2和步骤3，直到AOF文件中的所有写命令都被处理完毕为止。</p>
-<h3 id="AOF重写"><a href="#AOF重写" class="headerlink" title="AOF重写"></a>AOF重写</h3><p>虽然Redis将生成新AOF文件替换旧AOF文件的功能命名为“AOF文件重写”，但实际上，AOF文件重写并不需要对现有的AOF文件进行任何读取、分析或者写入操作，这个功能是通过读取服务器当前的数据库状态来实现的。</p>
-<p>首先从数据库中读取键现在的值，然后用一条命令去记录键值对，代替之前记录这个键值对的多条命令，这就是AOF重写功能的实现原理。</p>
-<h3 id="AOF后台重写"><a href="#AOF后台重写" class="headerlink" title="AOF后台重写"></a>AOF后台重写</h3><p>Redis不希望AOF重写造成服务器无法处理请求，所以Redis决定将AOF重写程序放到子进程里执行。</p>
-<p>子进程在重写期间，父进程还在接收命令，会出现数据不一致的情况。为了解决这种数据不一致问题，Redis服务器设置了一个AOF重写缓冲区，这个缓冲区在服务器创建子进程之后开始使用，当Redis服务器执行完一个写命令之后，它会同时将这个写命令发送给AOF缓冲区和AOF重写缓冲区。</p>
-<p>当子进程完成AOF重写工作之后，它会向父进程发送一个信号，父进程在接到该信号之后，会调用一个信号处理函数，并执行以下工作：</p>
-<ol>
-<li>将AOF重写缓冲区中的所有内容写入到新AOF文件中，这时新AOF文件所保存的数据库状态将和服务器当前的数据库状态一致。</li>
-<li>对新的AOF文件进行改名，原子地（atomic）覆盖现有的AOF文件，完成新旧两个AOF文件的替换。</li>
-</ol>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>Redis服务器是一个事件驱动程序，服务器需要处理以下两类事件：</p>
-<ul>
-<li><p>文件事件（file event）：Redis服务器通过套接字与客户端（或者其他Redis服务器）进行连接，而文件事件就是服务器对套接字操作的抽象。服务器与客户端（或者其他服务器）的通信会产生相应的文件事件，而服务器则通过监听并处理这些事件来完成一系列网络通信操作。</p>
-</li>
-<li><p>时间事件（time event）：Redis服务器中的一些操作（比如serverCron函数）需要在给定的时间点执行，而时间事件就是服务器对这类定时操作的抽象。</p>
-</li>
-</ul>
-<h3 id="文件事件"><a href="#文件事件" class="headerlink" title="文件事件"></a>文件事件</h3><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png" alt="image-20211227122435497"></p>
-<p>尽管多个文件事件可能会并发地出现，但I&#x2F;O多路复用程序总是会将所有产生事件的套接字都放到一个队列里面，然后通过这个队列，以有序（sequentially）、同步（synchronously）、每次一个套接字的方式向文件事件分派器传送套接字</p>
-<h4 id="文件事件的处理器"><a href="#文件事件的处理器" class="headerlink" title="文件事件的处理器"></a>文件事件的处理器</h4><p>Redis为文件事件编写了多个处理器，这些事件处理器分别用于实现不同的网络通信需求，比如说：</p>
-<ul>
-<li><p>为了对连接服务器的各个客户端进行应答，服务器要为监听套接字关联<strong>连接应答处理器</strong>。<br>当<strong>Redis服务器进行初始化</strong>的时候，程序会将这个连接应答处理器和服务器监听套接字的<strong>AE_READABLE</strong>事件关联起来，当有客户端用sys&#x2F;socket.h&#x2F;connect函数连接服务器监听套接字的时候，套接字就会产生AE_READABLE事件，引发连接应答处理器执行，并执行相应的套接字应答操作。</p>
-</li>
-<li><p>为了接收客户端传来的命令请求，服务器要为客户端套接字关联<strong>命令请求处理器</strong>。<br>当一个客户端<strong>通过连接应答处理器成功连接到服务器</strong>之后，服务器会将客户端套接字的<strong>AE_READABLE</strong>事件和命令请求处理器关联起来，当客户端向服务器发送命令请求的时候，套接字就会产生AE_READABLE事件，引发命令请求处理器执行，并执行相应的套接字读入操作。在客户端连接服务器的整个过程中，服务器都会一直为客户端套接字的AE_READABLE事件关联命令请求处理器。</p>
-</li>
-<li><p>为了向客户端返回命令的执行结果，服务器要为客户端套接字关联<strong>命令回复处理器</strong>。<br>当<strong>服务器有命令回复需要传送给客户端的时候</strong>，服务器会将客户端套接字的AE_WRITABLE事件和命令回复处理器关联起来，当客户端准备好接收服务器传回的命令回复时，就会产生AE_WRITABLE事件，引发命令回复处理器执行，并执行相应的套接字写入操作。当服务器有命令回复需要传送给客户端的时候，服务器会将客户端套接字的AE_WRITABLE事件和命令回复处理器关联起来。当命令回复发送完毕之后，服务器就会<strong>解除</strong>命令回复处理器与客户端套接字的AE_WRITABLE事件之间的关联。</p>
-</li>
-<li><p>当主服务器和从服务器进行复制操作时，主从服务器都需要关联特别为复制功能编写的复制处理器。</p>
-</li>
-</ul>
-<h3 id="时间事件"><a href="#时间事件" class="headerlink" title="时间事件"></a>时间事件</h3><p>Redis的时间事件分为以下两类：</p>
-<ul>
-<li><p>定时事件：让一段程序在指定的时间之后执行一次。比如说，让程序X在当前时间的30毫秒之后执行一次。</p>
-</li>
-<li><p>周期性事件：让一段程序每隔指定时间就执行一次。比如说，让程序Y每隔30毫秒就执行一次。</p>
-</li>
-</ul>
-<p>目前版本的Redis只使用周期性事件，而没有使用定时事件。</p>
-<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>服务器将所有时间事件都放在一个无序链表中，每当时间事件执行器运行时，它就<strong>遍历整个链表</strong>，查找所有已到达的时间事件，并调用相应的事件处理器。</p>
-<p>在目前版本中，正常模式下的Redis服务器只使用serverCron一个时间事件，在这种情况下，服务器几乎是将<strong>无序链表退化成一个指针来使用</strong>，所以使用无序链表来保存时间事件，<strong>并不影响事件执行的性能</strong>。</p>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>Redis通过使用由I&#x2F;O多路复用技术实现的文件事件处理器，Redis服务器使用单线程单进程的方式来处理命令请求，并与多个客户端进行网络通信。</p>
-<p>Redis服务器状态结构的clients属性是一个链表，这个链表保存了所有与服务器连接的客户端的状态结构，对客户端执行批量操作，或者查找某个指定的客户端，都可以通过遍历clients链表来完成。</p>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ol>
-<li>客户端的套接字描述符。</li>
-<li>客户端的名字。</li>
-<li>客户端的标志值（fag）。</li>
-<li>指向客户端正在使用的数据库的指针，以及该数据库的号码。</li>
-<li>客户端当前要执行的命令、命令的参数、命令参数的个数，以及指向命令实现函数的指针。</li>
-<li>客户端的输入缓冲区和输出缓冲区。</li>
-<li>客户端的复制状态信息，以及进行复制所需的数据结构。</li>
-<li>客户端执行BRPOP、BLPOP等列表阻塞命令时使用的数据结构。</li>
-<li>客户端的事务状态，以及执行WATCH命令时用到的数据结构。</li>
-<li>客户端执行发布与订阅功能时用到的数据结构。</li>
-<li>客户端的身份验证标志。</li>
-<li>客户端的创建时间，客户端和服务器最后一次通信的时间，以及客户端的输出缓冲区大小超出软性限制（soft limit）的时间。</li>
-</ol>
-<h3 id="示例图-7"><a href="#示例图-7" class="headerlink" title="示例图"></a>示例图</h3><p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png" alt="image-20220108142751976"></p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>通常情况下，Redis只会将那些对数据库进行了修改的命令写入到AOF文件，并复制到各个从服务器。如果一个命令没有对数据库进行任何修改，那么它就会被认为是只读命令，这个命令不会被写入到AOF文件，也不会被复制到从服务器。</p>
-<p>以上规则适用于绝大部分Redis命令，但PUBSUB命令和SCRIPT LOAD命令是其中的例外。PUBSUB命令虽然没有修改数据库，但PUBSUB命令向频道的所有订阅者发送消息这一行为带有副作用，接收到消息的所有客户端的状态都会因为这个命令而改变。因此，服务器需要使用REDIS_FORCE_AOF标志，强制将这个命令写入AOF文件，这样在将来载入AOF文件时，服务器就可以再次执行相同的PUBSUB命令，并产生相同的副作用。</p>
-<h3 id="伪客户端"><a href="#伪客户端" class="headerlink" title="伪客户端"></a>伪客户端</h3><ol>
-<li><p>Lua</p>
-<p>lua_client伪客户端在服务器运行的整个生命期中会一直存在，只有服务器被关闭时，这个客户端才会被关闭。</p>
-</li>
-<li><p>载入AOF文件</p>
-<p>服务器在载入AOF文件时，会创建用于执行AOF文件包含的Redis命令的伪客户端，并在载入完成之后，关闭这个伪客户端。</p>
-</li>
-</ol>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><h3 id="命令请求的执行过程（重要）"><a href="#命令请求的执行过程（重要）" class="headerlink" title="命令请求的执行过程（重要）"></a>命令请求的执行过程（重要）</h3><ol>
-<li><p>发送命令请求</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png" alt="image-20220108144056270"></p>
-</li>
-<li><p>读取命令请求<br>当客户端与服务器之间的<strong>连接套接字</strong>因为客户端的写入而变得<strong>可读</strong>时，服务器将调用<strong>命令请求处理器</strong>来执行以下操作：</p>
-<ul>
-<li>读取套接字中协议格式的命令请求，并将其保存到客户端状态的<strong>输入缓冲区</strong>里面。</li>
-<li>对输入缓冲区中的命令请求进行<strong>分析</strong>，提取出命令请求中包含的<strong>命令参数</strong>，以及命令参数的个数，然后分别将参数和参数个数保存到客户端状态的argv属性和argc属性里面。</li>
-<li>调用<strong>命令执行器</strong>，执行客户端指定的命令。</li>
-</ul>
-<p>命令执行器：</p>
-<ul>
-<li>去命令表查找<strong>命令的实现函数</strong></li>
-<li>执行预备操作：<ol>
-<li>检查参数是否正确； </li>
-<li>检查身份是否验证； </li>
-<li>检查内存使用情况</li>
-<li>检查是否在订阅模式，如果是，只会接收SUBSCRIBE、PSUBSCRIBE、UNSUBSCRIBE、PUNSUBSCRIBE四个命令</li>
-<li>检查是否在Lua脚本阻塞状态，如果是则拒绝命令</li>
-<li>检查是否在执行事务，如果是则只会执行EXEC、DISCARD、MULTI、WATCH四个命令</li>
-<li>检查服务器是否在进行数据载入，如果是则客户端发送的命令必须带有l标识（比如INFO、SHUTDOWN、PUBLISH等等）才会被服务器执行</li>
-</ol>
-</li>
-<li>调用<strong>命令的实现函数</strong>，并将结果放在输出缓冲区</li>
-<li>执行后续工作<ol>
-<li>记录慢查询日志</li>
-<li>记录aop文件</li>
-<li>如果有从服务器复制这个服务器，则会执行命令传播给所有从服务器</li>
-<li>记录调用次数</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>将命令回复给客户端<br>当客户端套接字变为<strong>可写状态</strong>时，服务器就会执行<strong>命令回复处理器</strong>，将保存在客户端<strong>输出缓冲区</strong>中的命令回复发送给客户端。</p>
-</li>
-<li><p>客户端打印回复内容</p>
-</li>
-</ol>
-<h3 id="serverCron函数"><a href="#serverCron函数" class="headerlink" title="serverCron函数"></a>serverCron函数</h3><p>每100ms运行一次</p>
-<h4 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h4><ol>
-<li>更新服务器时间缓存<br>避免每次获取时间的时候都执行系统调用，直接在内存中维护了时间</li>
-<li>更新服务器每秒执行的次数</li>
-<li>更新服务器内存峰值记录</li>
-<li>处理SIGTERM信号</li>
-<li>管理客户端资源<br>如果客户端链接超时则会释放这个客户端；如果输入缓冲区的大小超过了一定的长度，则会释放当前的输入缓冲区，并重新创建一个，以防客户端的输入缓冲区耗费太多内存。</li>
-<li>管理数据库资源<br>删除过期键</li>
-<li>执行被延迟的BGREWRITEAOF</li>
-<li>将AOF缓冲区中的内容写入AOF文件</li>
-<li>关闭异步客户端</li>
-</ol>
-<h3 id="初始化服务器"><a href="#初始化服务器" class="headerlink" title="初始化服务器"></a>初始化服务器</h3><p>一个Redis服务器从启动到能够接受客户端的命令请求，需要经过一系列的初始化和设置过程，比如初始化服务器状态，接受用户指定的服务器配置，创建相应的数据结构和网络连接等等。</p>
-<h1 id="第三部分：多机数据库的实现"><a href="#第三部分：多机数据库的实现" class="headerlink" title="第三部分：多机数据库的实现"></a>第三部分：多机数据库的实现</h1><h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><p>在Redis中，用户可以通过执行SLAVEOF命令或者设置slaveof选项，让一个服务器去复制（replicate）另一个服务器，我们称呼被复制的服务器为主服务器（master），而对主服务器进行复制的服务器则被称为从服务器（slave）。</p>
-<h4 id="旧版复制功能"><a href="#旧版复制功能" class="headerlink" title="旧版复制功能"></a>旧版复制功能</h4><p>Redis的复制功能分为<strong>同步</strong>（sync）和<strong>命令传播</strong>（command propagate）两个操作：</p>
-<h5 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h5><p>从服务器对主服务器的同步操作需要通过向主服务器发送<strong>SYNC命令</strong>来完成，以下是SYNC命令的执行步骤：</p>
-<ol>
-<li>从服务器向主服务器发送SYNC命令。</li>
-<li>收到SYNC命令的主服务器执行BGSAVE命令，在<strong>后台</strong>生成一个RDB文件，并使用一个<strong>缓冲区记录从现在开始执行的所有写命令</strong>。</li>
-<li>当主服务器的BGSAVE命令执行完毕时，主服务器会将BGSAVE命令生成的RDB文件发送给从服务器，从服务器接收并载入这个RDB文件，将自己的数据库状态更新至主服务器执行BGSAVE命令时的数据库状态。</li>
-<li>主服务器将记录在缓冲区里面的所有写命令发送给从服务器，从服务器执行这些写命令，将自己的数据库状态更新至主服务器数据库当前所处的状态。</li>
-</ol>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png" alt="image-20220108150337037"></p>
-<h5 id="命令传播"><a href="#命令传播" class="headerlink" title="命令传播"></a>命令传播</h5><p>为了让主从服务器再次回到一致状态，主服务器需要对从服务器执行命令传播操作：主服务器会将自己执行的写命令，也即是造成主从服务器不一致的那条写命令，发送给从服务器执行，当从服务器执行了相同的写命令之后，主从服务器将再次回到一致状态。</p>
-<h5 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h5><p>SYNC命令是一个非常耗费资源的操作（主服务器需要生成RDB文件，从服务器需要载入RDB文件，网络需要传输RDB文件）；当从服务器断线重连之后，需要通过SYNC从头同步整个数据库。</p>
-<h4 id="新版复制功能"><a href="#新版复制功能" class="headerlink" title="新版复制功能"></a>新版复制功能</h4><p>使用PSYNC命令代替SYNC命令来执行复制时的同步操作。PSYNC命令具有完整重同步（full resynchronization）和部分重同步（partialresynchronization）两种模式。</p>
-<h5 id="完整重同步"><a href="#完整重同步" class="headerlink" title="完整重同步"></a>完整重同步</h5><p>用于初次复制的情况</p>
-<h5 id="部分重同步"><a href="#部分重同步" class="headerlink" title="部分重同步"></a>部分重同步</h5><p>主服务器维护一个固定长度的<strong>复制积压缓冲区</strong></p>
-<p>从服务器断线重新复制的时候，告诉主服务器复制的偏移量，主服务器如果发现断线期间新增的数据还在<strong>复制积压缓冲区</strong>中，则会执行部分重同步，否则执行完整重同步。</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png" alt="image-20220108150821262"></p>
-<h2 id="Sentinel"><a href="#Sentinel" class="headerlink" title="Sentinel"></a>Sentinel</h2><p>Sentinel（哨岗、哨兵）是Redis的<strong>高可用性</strong>（high availability）解决方案：由一个或多个Sentinel实例（instance）组成的Sentinel系统（system）可以监视任意多个主服务器，以及这些主服务器属下的所有从服务器，并在被监视的主服务器进入下线状态时，自动将下线主服务器属下的某个从服务器升级为新的主服务器，然后由新的主服务器代替已下线的主服务器继续处理命令请求。</p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><h4 id="启动并初始化Sentinel"><a href="#启动并初始化Sentinel" class="headerlink" title="启动并初始化Sentinel"></a>启动并初始化Sentinel</h4><ol>
-<li><p>首先，因为Sentinel本质上只是一个运行在特殊模式下的Redis服务器，所以启动Sentinel的第一步，就是初始化一个普通的Redis服务器。</p>
-</li>
-<li><p>启动Sentinel的第二个步骤就是将一部分普通Redis服务器使用的代码替换成Sentinel专用代码</p>
-</li>
-<li><p>在应用了Sentinel的专用代码之后，接下来，服务器会初始化一个sentinel.c&#x2F;sentinelState结构（后面简称“Sentinel状态”），这个结构保存了服务器中所有和Sentinel功能有关的状</p>
-</li>
-<li><p>初始化Sentinel状态的masters属性</p>
-</li>
-<li><p>初始化Sentinel的最后一步是创建连向被监视主服务器的网络连接，Sentinel将成为主服务器的客户端，它可以向主服务器发送命令，并从命令回复中获取相关的信息。</p>
-</li>
-</ol>
-<h4 id="获取主服务器的信息"><a href="#获取主服务器的信息" class="headerlink" title="获取主服务器的信息"></a>获取主服务器的信息</h4><p>Sentinel默认会以每十秒一次的频率，通过命令连接向被监视的主服务器发送INFO命令，并通过分析INFO命令的回复来获取主服务器的当前信息。</p>
-<h4 id="获取从服务器的信息"><a href="#获取从服务器的信息" class="headerlink" title="获取从服务器的信息"></a>获取从服务器的信息</h4><p>当Sentinel发现主服务器有新的从服务器出现时，Sentinel除了会为这个新的从服务器创建相应的实例结构之外，Sentinel还会创建连接到从服务器的命令连接和订阅连接。在创建命令连接之后，Sentinel在默认情况下，会以每十秒一次的频率通过命令连接向从服务器发送INFO命令。</p>
-<h4 id="向主服务器和从服务器发送信息"><a href="#向主服务器和从服务器发送信息" class="headerlink" title="向主服务器和从服务器发送信息"></a>向主服务器和从服务器发送信息</h4><p>在默认情况下，Sentinel会以每两秒一次的频率，通过命令连接向所有被监视的主服务器和从服务器发送命令告诉监视的服务器自己的信息。</p>
-<h4 id="接收来自主服务器和从服务器的频道信息"><a href="#接收来自主服务器和从服务器的频道信息" class="headerlink" title="接收来自主服务器和从服务器的频道信息"></a>接收来自主服务器和从服务器的频道信息</h4><p>对于每个与Sentinel连接的服务器，Sentinel既通过命令连接向服务器的__sentinel__:hello频道发送信息，又通过订阅连接从服务器的__sentinel__:hello频道接收信息。</p>
-<p>对于监视同一个服务器的多个Sentinel来说，一个Sentinel发送的信息会被其他Sentinel接收到，这些信息会被用于更新其他Sentinel对发送信息Sentinel的认知，也会被用于更新其他Sentinel对被监视服务器的认知。</p>
-<p>因为一个Sentinel可以通过分析接收到的频道信息来<strong>获知其他Sentinel的存在</strong>，并通过发送频道信息来<strong>让其他Sentinel知道自己的存在</strong>，所以用户在使用Sentinel的时候并不需要提供各个Sentinel的地址信息，监视同一个主服务器的多个Sentinel<strong>可以自动发现对方</strong>。</p>
-<h4 id="创建连向其他Sentinel的命令连接"><a href="#创建连向其他Sentinel的命令连接" class="headerlink" title="创建连向其他Sentinel的命令连接"></a>创建连向其他Sentinel的命令连接</h4><p>当Sentinel通过频道信息发现一个新的Sentinel时，它不仅会为新Sentinel在sentinels字典中创建相应的实例结构，还会创建一个连向新Sentinel的<strong>命令连接</strong>，但不会创建<strong>订阅连接</strong>。</p>
-<h3 id="故障转移"><a href="#故障转移" class="headerlink" title="故障转移"></a>故障转移</h3><h4 id="检测主观下线"><a href="#检测主观下线" class="headerlink" title="检测主观下线"></a>检测主观下线</h4><p>在默认情况下，Sentinel会以每秒一次的频率向所有与它创建了命令连接的实例（包括主服务器、从服务器、其他Sentinel在内）发送PING命令，并通过实例返回的PING命令回复来判断实例是否在线。</p>
-<h4 id="检测客观下线"><a href="#检测客观下线" class="headerlink" title="检测客观下线"></a>检测客观下线</h4><p>当Sentinel将一个主服务器判断为主观下线之后，为了确认这个主服务器是否真的下线了，它会向同样监视这一主服务器的<strong>其他Sentinel进行询问</strong>，看它们是否也认为主服务器已经进入了下线状态（可以是主观下线或者客观下线）。当Sentinel从其他Sentinel那里接收到足够数量的已下线判断之后，Sentinel就会将从服务器判定为<strong>客观下线</strong>，并对主服务器<strong>执行故障转移操作</strong>。</p>
-<h4 id="选举领头Sentinel"><a href="#选举领头Sentinel" class="headerlink" title="选举领头Sentinel"></a>选举领头Sentinel</h4><p>当一个主服务器被判断为客观下线时，监视这个下线主服务器的各个Sentinel会进行协商，选举出一个领头Sentinel，并由领头Sentinel对下线主服务器执行故障转移操作。</p>
-<p>如果有某个Sentinel被半数以上的Sentinel设置成了局部领头Sentinel，那么这个Sentinel成为领头Sentinel</p>
-<h4 id="故障转移-1"><a href="#故障转移-1" class="headerlink" title="故障转移"></a>故障转移</h4><ol>
-<li>在已下线主服务器属下的所有从服务器里面，挑选出一个从服务器，并将其转换为主服务器。<br>选举策略：<ul>
-<li>删除不可用、或者有较长一段时间没有通信的从服务器；</li>
-<li>根据优先级比较高、复制偏移量比较大的从服务器中选；</li>
-<li>如果都一样，则选举<strong>运行id最小</strong>的那个从服务器；</li>
-</ul>
-</li>
-<li>让已下线主服务器属下的所有从服务器改为复制新的主服务器。</li>
-<li>将已下线主服务器设置为新的主服务器的从服务器，当这个旧的主服务器重新上线时，它就会成为新的主服务器的从服务器。</li>
-</ol>
-<h2 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h2><p>Redis集群是Redis提供的分布式数据库方案，集群通过分片（sharding）来进行数据共享，并提供复制和故障转移功能。</p>
-<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>节点会继续使用redisServer结构来保存服务器的状态，使用redisClient结构来保存客户端的状态，至于那些只有在集群模式下才会用到的数据，节点将它们保存到了<strong>cluster.h&#x2F;clusterNode结构、cluster.h&#x2F;clusterLink结构，以及cluster.h&#x2F;clusterState结构</strong>里面。</p>
-<h4 id="集群数据结构"><a href="#集群数据结构" class="headerlink" title="集群数据结构"></a>集群数据结构</h4><ul>
-<li><p>clusterNode</p>
-<p><strong>clusterNode结构</strong>保存了一个节点的当前状态，比如节点的创建时间、节点的名字、节点当前的配置纪元、节点的IP地址和端口号。</p>
-</li>
-<li><p>clusterLink</p>
-<p>clusterNode结构的link属性是一个<strong>clusterLink结构</strong>，该结构保存了连接节点所需的有关信息，比如套接字描述符，输入缓冲区和输出缓冲区。<br>redisClient结构和clusterLink结构都有自己的套接字描述符和输入、输出缓冲区，这两个结构的区别在于，redisClient结构中的套接字和缓冲区是用于<strong>连接客户端</strong>的，而clusterLink结构中的套接字和缓冲区则是用于<strong>连接节点</strong>的。</p>
-</li>
-<li><p>clusterState<br>每个节点都保存着一个clusterState结构，这个结构记录了在当前节点的视角下，集群目前所处的状态，例如集群是在线还是下线，集群包含多少个节点，集群当前的配置纪元。</p>
-</li>
-</ul>
-<h3 id="槽指派"><a href="#槽指派" class="headerlink" title="槽指派"></a>槽指派</h3><p>Redis集群通过分片的方式来保存数据库中的键值对：集群的整个数据库被分为16384个槽（slot），数据库中的每个键都属于这16384个槽的其中一个，集群中的每个节点可以处理0个或最多16384个槽。</p>
-<p>当数据库中的16384个槽都有节点在处理时，集群处于上线状态（ok）；相反地，如果数据库中有任何一个槽没有得到处理，那么集群处于下线状态（fail）。</p>
-<p>通过向节点发送CLUSTER ADDSLOTS命令，我们可以将一个或多个槽指派（assign）给节点负责。</p>
-<p><strong>clusterNode结构</strong>的<strong>slots属性</strong>和numslot属性记录了节点负责处理哪些槽。</p>
-<h4 id="传播节点的槽指派信息"><a href="#传播节点的槽指派信息" class="headerlink" title="传播节点的槽指派信息"></a>传播节点的槽指派信息</h4><p>一个节点除了会将自己负责处理的槽记录在clusterNode结构的slots属性和numslots属性之外，它还会将自己的slots数组通过消息发送给集群中的其他节点，以此来告知其他节点自己目前负责处理哪些槽。</p>
-<p>当节点A通过消息从节点B那里接收到节点B的slots数组时，节点A会在自己的clusterState.nodes字典中查找节点B对应的clusterNode结构，并对结构中的slots数组进行<strong>保存或者更新</strong>。</p>
-<h4 id="记录集群所有槽的指派信息"><a href="#记录集群所有槽的指派信息" class="headerlink" title="记录集群所有槽的指派信息"></a>记录集群所有槽的指派信息</h4><p>clusterState结构中的slots数组记录了集群中所有16384个槽的指派信息</p>
-<p>slots数组包含16384个项，每个数组项都是一个指向clusterNode结构的指针：</p>
-<p><img src="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png" alt="image-20220108154212058"></p>
-<h4 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h4><p>clusterNode.slots数组和clusterState.slots数组都保存了槽指派信息；为什么分两份存，主要是考虑操作性能。</p>
-<h3 id="在集群中执行命令"><a href="#在集群中执行命令" class="headerlink" title="在集群中执行命令"></a>在集群中执行命令</h3><p>当客户端向节点发送与数据库键有关的命令时，接收命令的节点会计算出命令要处理的数据库键属于哪个槽，并检查这个槽是否指派给了自己：</p>
-<ol>
-<li><p>如果键所在的槽正好就指派给了当前节点，那么节点直接执行这个命令。</p>
-</li>
-<li><p>如果键所在的槽并没有指派给当前节点，那么节点会向客户端返回一个<strong>MOVED错误</strong>，指引客户端转向（redirect）至正确的节点，并再次发送之前想要执行的命令。</p>
-</li>
-</ol>
-<h3 id="节点数据库的实现"><a href="#节点数据库的实现" class="headerlink" title="节点数据库的实现"></a>节点数据库的实现</h3><p>集群节点保存键值对以及键值对过期时间的方式</p>
-<p>节点和单机服务器在数据库方面的一个区别是，<strong>节点只能使用0号数据库</strong>，而单机Redis服务器则没有这一限制。</p>
-<h3 id="复制与故障转移"><a href="#复制与故障转移" class="headerlink" title="复制与故障转移"></a>复制与故障转移</h3><p>Redis集群中的节点分为主节点（master）和从节点（slave），其中主节点用于处理槽，而从节点则用于复制某个主节点，并在被复制的主节点下线时，代替下线主节点继续处理命令请求。</p>
-<p>一个节点成为从节点，并开始复制某个主节点这一信息会通过消息发送给集群中的其他节点，最终集群中的所有节点都会知道某个从节点正在复制某个主节点。</p>
-<p>集群中的所有节点都会在代表主节点的clusterNode结构的slaves属性和numslaves属性中记录正在复制这个主节点的从节点名单。</p>
-<h4 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a>故障检测</h4><p>集群中的每个节点都会定期地向集群中的其他节点发送PING消息，以此来检测对方是否在线，如果接收PING消息的节点没有在规定的时间内，向发送PING消息的节点返回PONG消息，那么发送PING消息的节点就会将接收PING消息的节点标记为<strong>疑似下线</strong>（probable fail，PFAIL）。</p>
-<p>如果在一个集群里面，<strong>半数</strong>以上负责处理槽的主节点都将某个主节点x报告为<strong>疑似下线</strong>，那么这个主节点x将被标记为<strong>已下线</strong></p>
-<h4 id="故障转移-2"><a href="#故障转移-2" class="headerlink" title="故障转移"></a>故障转移</h4><p>当一个从节点发现自己正在复制的主节点进入了已下线状态时，从节点将开始对下线主节点进行故障转移，以下是故障转移的执行步骤：</p>
-<ol>
-<li>复制下线主节点的所有从节点里面，会有一个从节点被选中。</li>
-<li>被选中的从节点会执行SLAVEOF no one命令，成为新的主节点。</li>
-<li>新的主节点会撤销所有对已下线主节点的槽指派，并将这些槽全部指派给自己。</li>
-<li>新的主节点向集群广播一条PONG消息，这条PONG消息可以让集群中的其他节点立即知道这个节点已经由从节点变成了主节点，并且这个主节点已经接管了原本由已下线节点负责处理的槽。</li>
-<li>新的主节点开始接收和自己负责处理的槽有关的命令请求，故障转移完成。</li>
-</ol>
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
 
-      
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item  white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/" data-id="cl3tljae40000ji6a2zix7ac5" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/a991817/a991817.github.io.git/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
 
 
-  
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/a991817/a991817.github.io.git/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
     </div>
-  </div>
 
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</div>
 
-  
-</aside>
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-  </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
+    </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/a991817/a991817.github.io.git/2022/05/31/redis-she-ji-yu-shi-xian-bi-ji/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/a991817/a991817.github.io.git/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                数据结构简单动态字符串SDS跟C语言一样是个char字符数组；
+一个sds对象有free、len属性记录空余空间和当前字符串长度
+示例图
+特点
+常数复杂度获取字符串长度直接从free、len属性获取
+
+杜绝缓冲区溢出C语言字符串拼接时都假定
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-31
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/a991817/a991817.github.io.git/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/a991817/a991817.github.io.git/libs/aplayer/APlayer.min.js"></script>
+<script src="/a991817/a991817.github.io.git/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/a991817/a991817.github.io.git/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/a991817/a991817.github.io.git/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
 </footer>
 
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/a991817/a991817.github.io.git/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/a991817/a991817.github.io.git/libs/materialize/materialize.min.js"></script>
+    <script src="/a991817/a991817.github.io.git/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/a991817/a991817.github.io.git/libs/aos/aos.js"></script>
+    <script src="/a991817/a991817.github.io.git/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/a991817/a991817.github.io.git/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/a991817/a991817.github.io.git/js/matery.js"></script>
+
     
 
+    
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- 雪花特效 -->
+    
 
+    <!-- 鼠标星星特效 -->
+    
 
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/a991817/a991817.github.io.git/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <!-- Baidu Analytics -->
 
+    <!-- Baidu Push -->
 
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
+    
+    <script src="/a991817/a991817.github.io.git/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/a991817/a991817.github.io.git/libs/others/busuanzi.pure.mini.js"></script>
+    
 
-<script src="/js/script.js"></script>
+    
 
+    
 
+    <!--腾讯兔小巢-->
+    
+    
 
+    
 
+    
 
-  </div>
+    
+    <script src="/a991817/a991817.github.io.git/libs/instantpage/instantpage.js" type="module"></script>
+    
+
 </body>
+
 </html>
