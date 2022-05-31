@@ -6,13 +6,40 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="数据结构简单动态字符串SDS跟C语言一样是个char字符数组； 一个sds对象有free、len属性记录空余空间和当前字符串长度 示例图 特点 常数复杂度获取字符串长度直接从free、len属性获取  杜绝缓冲区溢出C语言字符串拼接时都假定分配的内存足够，如果这个假定不成立就会产生缓冲区溢出；当SDS API需要对SDS进行修改时，API会先检查SDS的空间是否满足修改所需的要求，如果不满足的话，">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据结构简单动态字符串SDS跟C语言一样是个char字符数组； 一个sds对象有free、len属性记录空余空间和当前字符串长度 示例图 特点 常数复杂度获取字符串长度直接从free、len属性获取  杜绝缓冲区溢出C语言字符串拼接时都假定分配的内存足够，如果这个假定不成立就会产生缓冲区溢出；当SDS API需要对SDS进行修改时，API会先检查SDS的空间是否满足修改所需的要求，如果不满足的话，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221123652853.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221124137128.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223121705566.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122023914.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223122749578.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123006023.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123127507.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123242022.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123903740.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223123845793.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211223124409476.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121242433.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224121349312.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211224123718806.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227121109237.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211227122435497.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108142751976.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108144056270.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150337037.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108150821262.png">
+<meta property="og:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20220108154212058.png">
+<meta property="article:published_time" content="2022-05-31T03:09:28.201Z">
+<meta property="article:modified_time" content="2022-05-31T03:30:01.845Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/image-20211221122226731.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +96,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Redis设计与实现笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Redis设计与实现笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/31/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%AC%94%E8%AE%B0/" class="article-date">
   <time class="dt-published" datetime="2022-05-31T03:09:28.201Z" itemprop="datePublished">2022-05-31</time>
@@ -428,11 +453,9 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
   
+</article>
 
 
 </section>
